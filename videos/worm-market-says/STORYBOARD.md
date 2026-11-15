@@ -1,63 +1,59 @@
 ---
 format: 1920x1080
-duration: 44s
+duration: 41.1s
 message: "The market puts a number on every Premier League match. Make your call on worm."
-arc: Terminal hook → 77% → Pundits vs market → PL on worm → What the % means → My call → Proof → Lockup → CTA
+arc: Hook → Terminal → 77% drop → PL on worm → What % means → My call → Proof → You predict → Lockup → CTA
 audience: Superteam Earn judges and football fans on X
 mode: collaborative
-style: worm house style (Instrument Sans, terminal, CRT fringe, tilted UI panels, monochrome)
+audio: Polygon bed (carved under the voice) + ElevenLabs VO (Roger) split at 5.33s so "seventy-seven percent" lands on the 8.45s drop
 ---
 
-## Frame 1: Terminal hook (0-4.5s)
-- act: Hook
-- status: built
-- src: compositions/frames/01-terminal.html
-- scene: Typed terminal with blinking cursor: worm predict premier-league / scanning 20 clubs / pricing epl 2027 champion / market says: arsenal 77%
+## Frame 1: Pundits hook (0-3.72s)
+- status: animated
+- src: compositions/frames/01-hook.html
+- scene: every week, pundits argue / about the premier league. Word by word with the voice.
 
-## Frame 2: 77% (4.5-9.5s)
-- act: Hook
-- status: built
-- src: compositions/frames/02-big-number.html
-- scene: Hard cut to a giant 77% with a CRT/RGB fringe hit. "arsenal to win the 2027 premier league." builds word by word.
+## Frame 2: Terminal (3.72-8.45s)
+- status: animated
+- src: compositions/frames/02-terminal.html
+- scene: Typed: worm predict premier-league → market says: arsenal 77%. The cursor blinks through the music's silence.
 
-## Frame 3: Pundits vs market (9.5-12.5s)
-- act: Hook
-- status: built
-- src: compositions/frames/03-pundits.html
-- scene: "pundits argue." then "the market puts a number on it." word by word
+## Frame 3: 77% (8.45-13.4s)
+- status: animated
+- src: compositions/frames/03-big-number.html
+- scene: The beat drops on 77% with a flash and RGB fringe, then 'the market's chance arsenal win the league.'
 
-## Frame 4: Premier League on worm (12.5-19.5s)
-- act: Show
-- status: built
+## Frame 4: Premier League on worm (13.4-19.1s)
+- status: animated
 - src: compositions/frames/04-premier-league.html
-- scene: Tilted floating panel plays the user's PL clip (PL tab, EPL 2027 Champion, chart, Arsenal 77%). Headline: every premier league market. live.
+- scene: Tilted panel: PL tab → EPL 2027 Champion → Arsenal 77%. every premier league market. live on worm. all 20 clubs. every match.
 
-## Frame 5: What the % means (19.5-25s)
-- act: Explain
-- status: built
+## Frame 5: What the % means (19.1-24.7s)
+- status: animated
 - src: compositions/frames/05-what-percent.html
-- scene: yes costs 77¢. right? it pays $1. Yes/No pills in app green. 77% = the market's chance it happens.
+- scene: think it's higher? predict yes at 77¢. right? it pays $1. Yes/No pills pop.
 
-## Frame 6: My call (25-34s)
-- act: Proof
-- status: built
+## Frame 6: My call (24.7-30.5s)
+- status: animated
 - src: compositions/frames/06-my-call.html
-- scene: Panel cuts through $1 → $1.33, Submit Buy, then the "To win $1" share card. "i made my call."
+- scene: Panel cuts: $1 → $1.33, Submit, To win $1. i made my call. $1 in → $1.33 back if arsenal lift the trophy.
 
-## Frame 7: Real account, real call (34-37.5s)
-- act: Proof
-- status: built
+## Frame 7: Proof (30.5-32.5s)
+- status: animated
 - src: compositions/frames/07-proof.html
-- scene: Live Arsenal position panel. @sammiedfab · live position.
+- scene: real account. real prediction. Live Arsenal position.
 
-## Frame 8: worm × premier league (37.5-40s)
-- act: Close
-- status: built
-- src: compositions/frames/08-lockup.html
-- scene: worm chrome W × "premier league", in the style of worm's partner lockups.
+## Frame 8: You predict (32.5-34.5s)
+- status: animated
+- src: compositions/frames/08-you-predict.html
+- scene: pundits argue. you predict.
 
-## Frame 9: CTA (40-44s)
-- act: Close
-- status: built
-- src: compositions/frames/09-cta.html
-- scene: White end card: predict the premier league on worm / worm.wtf/r/sammiedfab / @wormwtf
+## Frame 9: Lockup (34.5-36.2s)
+- status: animated
+- src: compositions/frames/09-lockup.html
+- scene: worm W × premier league, then make your call on worm.
+
+## Frame 10: CTA (36.2-41.1s)
+- status: animated
+- src: compositions/frames/10-cta.html
+- scene: White card that slowly grows: worm.wtf/r/sammiedfab, @wormwtf · link below. The music tails out.

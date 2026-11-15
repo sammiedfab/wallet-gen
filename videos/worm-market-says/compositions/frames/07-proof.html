@@ -13,33 +13,41 @@
       #f07 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
       #f07 .dim { color:#7D7F82; }
       #f07 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
-      #f07 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:26px; color:#8E9094; letter-spacing:0.02em; }
+      #f07 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:28px; color:#8E9094; letter-spacing:0.02em; }
       #f07 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
       #f07 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
       #f07 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
       #f07 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
       #f07 .stage { position:absolute; perspective:2000px; }
-      #f07 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; }
+      #f07 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; transform-origin:50% 50%; }
       #f07 .panel video, #f07 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
       #f07 .yes { background:#27B54F; color:#06150B; }
       #f07 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
       #f07 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
 
-      #f07 .stage { right:300px; top:80px; width:470px; height:920px; }
-      #f07 .panel { transform:rotateY(-14deg) rotateX(5deg); }
-      #f07 .h { position:absolute; left:140px; top:330px; width:1100px; font-size:120px; }
-      #f07 .mono { position:absolute; left:144px; top:600px; font-size:30px; color:#A3A5A8; }
+      #f07 .w { display:inline-block; margin-right:0.24em; will-change:transform, opacity, filter; }
+      #f07 .ch { opacity:0; }
+
+      #f07 .stage { right:300px; top:100px; width:470px; height:880px; }
+      #f07 .h { position:absolute; left:140px; top:330px; width:1100px; font-size:128px; }
+      #f07 .h2 { position:absolute; left:140px; top:470px; width:1100px; font-size:128px; }
+      #f07 .mono { position:absolute; left:144px; top:660px; font-size:30px; color:#A3A5A8; }
 
       </style>
       <div id="f07" data-composition-id="f07" data-width="1920" data-height="1080">
-
-        <div class="hl h">real account.<br>real call.</div>
-        <div class="mono">@sammiedfab · live position · arsenal yes</div>
-        <div class="stage"><div class="panel"><video id="f07-v1" class="clip" src="assets/pl-arsenal.mp4" muted playsinline data-start="0" data-duration="3.5" data-media-start="32.5" data-track-index="0"></video></div></div>
-
+<div class="hl h"><span class="w " id="f07a-0">real</span><span class="w " id="f07a-1">account.</span></div><div class="hl h2"><span class="w " id="f07b-0">real</span><span class="w " id="f07b-1">prediction.</span></div>
+        <div class="mono" id="f07-m">@sammiedfab · live position · arsenal yes</div>
+        <div class="stage"><div class="panel" id="f07-p"><video id="f07-v1" class="clip" src="assets/pl-arsenal.mp4" muted playsinline data-start="0" data-duration="2.0" data-media-start="32.5" data-track-index="0"></video></div></div>
       </div>
       <script>
         const tl = gsap.timeline({ paused: true });
+tl.fromTo("#f07a-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.07);
+tl.fromTo("#f07a-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.27);
+tl.fromTo("#f07b-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.93);
+tl.fromTo("#f07b-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.21);
+tl.fromTo("#f07-p", {x:260, rotationY:-36, rotationX:8, rotationZ:1, opacity:0, scale:0.92}, {x:0, rotationY:-14, rotationX:6, rotationZ:1, opacity:1, scale:1, duration:0.8, ease:"power3.out"}, 0);
+tl.to("#f07-p", {rotationY:-9, y:-18, duration:1.2, ease:"none"}, 0.8);
+tl.fromTo("#f07-m",{opacity:0},{opacity:1,duration:0.2},0.0);
         window.__timelines["f07"] = tl;
       </script>
     </template>

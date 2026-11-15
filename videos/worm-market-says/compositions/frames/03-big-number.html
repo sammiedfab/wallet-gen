@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      @font-face { font-family:"Instrument Sans"; font-weight:400; src:url("assets/fonts/Instrument-Sans-wght-400.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:500; src:url("assets/fonts/Instrument-Sans-wght-500.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:600; src:url("assets/fonts/Instrument-Sans-wght-600.woff2") format("woff2"); }
+      @font-face { font-family:"DejaVu Sans Mono"; font-weight:400; src:url("assets/fonts/DejaVuSansMono.ttf") format("truetype"); }
+      @font-face { font-family:"VT323"; font-weight:400; src:url("assets/fonts/VT323.woff2") format("woff2"); }
+      #f03 { position:absolute; inset:0; overflow:hidden; background:radial-gradient(120% 90% at 50% 110%, #1E1F21 0%, #0B0B0C 55%, #050505 100%); color:#F4F4F2; font-family:"Instrument Sans", sans-serif; }
+      #f03 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
+      #f03 .dim { color:#7D7F82; }
+      #f03 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
+      #f03 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:28px; color:#8E9094; letter-spacing:0.02em; }
+      #f03 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
+      #f03 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
+      #f03 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
+      #f03 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
+      #f03 .stage { position:absolute; perspective:2000px; }
+      #f03 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; transform-origin:50% 50%; }
+      #f03 .panel video, #f03 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
+      #f03 .yes { background:#27B54F; color:#06150B; }
+      #f03 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
+      #f03 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
+
+      #f03 .w { display:inline-block; margin-right:0.24em; will-change:transform, opacity, filter; }
+      #f03 .ch { opacity:0; }
+
+      #f03 .num { position:absolute; left:0; right:0; top:110px; text-align:center; font-size:540px; transform-origin:50% 55%; }
+      #f03 .num small { font-size:300px; }
+      #f03 .line { position:absolute; left:0; right:0; top:730px; text-align:center; font-size:84px; }
+      #f03 .tag { position:absolute; left:0; right:0; top:870px; text-align:center; font-size:46px; color:#9EA0A3; }
+      #f03 .flash { position:absolute; inset:0; background:#F4F4F2; opacity:0; }
+
+      </style>
+      <div id="f03" data-composition-id="f03" data-width="1920" data-height="1080">
+<div class="hl num" id="f03-num">77<small>%</small></div>
+        <div class="hl line"><span class="w " id="f03-0">the</span><span class="w " id="f03-1">market's</span><span class="w " id="f03-2">chance</span><span class="w " id="f03-3">arsenal</span><span class="w " id="f03-4">win</span><span class="w " id="f03-5">the</span><span class="w " id="f03-6">league.</span></div>
+        <div class="px tag" id="f03-tag">live on worm · epl 2027 champion</div>
+        <div class="scan" id="f03-scan"></div>
+        <div class="flash" id="f03-flash"></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+tl.fromTo("#f03-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.88);
+tl.fromTo("#f03-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 2.04);
+tl.fromTo("#f03-2", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 2.5);
+tl.fromTo("#f03-3", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 2.82);
+tl.fromTo("#f03-4", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.23);
+tl.fromTo("#f03-5", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.47);
+tl.fromTo("#f03-6", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.57);
+tl.fromTo("#f03-flash", {opacity:0.55}, {opacity:0, duration:0.3, ease:"power2.out"}, 0);
+tl.fromTo("#f03-num", {scale:1.28, opacity:0, textShadow:"-26px 0 0 rgba(255,40,80,0.8), 26px 0 0 rgba(40,140,255,0.8)"}, {scale:1, opacity:1, textShadow:"-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55)", duration:0.55, ease:"expo.out"}, 0);
+tl.to("#f03-num", {textShadow:"-12px 0 0 rgba(255,40,80,0.7), 12px 0 0 rgba(40,140,255,0.7)", duration:0.06, yoyo:true, repeat:3}, 0.9);
+tl.fromTo("#f03-scan", {opacity:1}, {opacity:0.45, duration:0.6, ease:"power2.out"}, 0);
+tl.to("#f03-num", {scale:1.04, duration:4.4, ease:"none"}, 0.55);
+tl.fromTo("#f03-tag", {opacity:0}, {opacity:1, duration:0.4}, 2.6);
+        window.__timelines["f03"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

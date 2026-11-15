@@ -13,35 +13,42 @@
       #f09 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
       #f09 .dim { color:#7D7F82; }
       #f09 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
-      #f09 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:26px; color:#8E9094; letter-spacing:0.02em; }
+      #f09 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:28px; color:#8E9094; letter-spacing:0.02em; }
       #f09 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
       #f09 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
       #f09 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
       #f09 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
       #f09 .stage { position:absolute; perspective:2000px; }
-      #f09 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; }
+      #f09 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; transform-origin:50% 50%; }
       #f09 .panel video, #f09 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
       #f09 .yes { background:#27B54F; color:#06150B; }
       #f09 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
       #f09 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
 
-      #f09 .white { position:absolute; inset:0; background:#F7F7F5; color:#0B0B0C; }
-      #f09 .k { position:absolute; left:0; right:0; top:330px; text-align:center; font-size:52px; color:#5D5F62; letter-spacing:-0.02em; }
-      #f09 .url { position:absolute; left:0; right:0; top:440px; text-align:center; font-size:140px; }
-      #f09 .h { position:absolute; left:0; right:0; top:680px; text-align:center; font-size:40px; color:#5D5F62; }
+      #f09 .w { display:inline-block; margin-right:0.24em; will-change:transform, opacity, filter; }
+      #f09 .ch { opacity:0; }
+
+      #f09 .row { position:absolute; left:0; right:0; top:330px; display:flex; align-items:center; justify-content:center; gap:80px; }
+      #f09 .logo { width:240px; height:240px; }
+      #f09 .x { font-size:64px; color:#6F7174; font-weight:400; }
+      #f09 .pl { font-size:120px; }
+      #f09 .cta { position:absolute; left:0; right:0; top:690px; text-align:center; font-size:72px; color:#C9CBCE; }
 
       </style>
       <div id="f09" data-composition-id="f09" data-width="1920" data-height="1080">
-
-        <div class="white">
-          <div class="k">predict the premier league on worm</div>
-          <div class="hl url">worm.wtf/r/sammiedfab</div>
-          <div class="h">@wormwtf</div>
-        </div>
-
+<div class="row"><img class="logo" id="f09-logo" src="assets/brand/favicon.png" alt="" /><span class="x" id="f09-x">×</span><span class="hl pl" id="f09-pl">premier league</span></div>
+        <div class="hl cta"><span class="w " id="f09-0">make</span><span class="w " id="f09-1">your</span><span class="w " id="f09-2">call</span><span class="w " id="f09-3">on</span><span class="w " id="f09-4">worm.</span></div>
       </div>
       <script>
         const tl = gsap.timeline({ paused: true });
+tl.fromTo("#f09-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.02);
+tl.fromTo("#f09-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.39);
+tl.fromTo("#f09-2", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.75);
+tl.fromTo("#f09-3", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.91);
+tl.fromTo("#f09-4", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.37);
+tl.fromTo("#f09-logo", {opacity:0, y:30, scale:0.8}, {opacity:1, y:0, scale:1, duration:0.6, ease:"expo.out"}, 0);
+tl.fromTo("#f09-x", {opacity:0}, {opacity:1, duration:0.3}, 0.2);
+tl.fromTo("#f09-pl", {opacity:0, x:-24}, {opacity:1, x:0, duration:0.5, ease:"power3.out"}, 0.3);
         window.__timelines["f09"] = tl;
       </script>
     </template>

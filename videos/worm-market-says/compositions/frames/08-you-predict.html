@@ -13,31 +13,34 @@
       #f08 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
       #f08 .dim { color:#7D7F82; }
       #f08 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
-      #f08 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:26px; color:#8E9094; letter-spacing:0.02em; }
+      #f08 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:28px; color:#8E9094; letter-spacing:0.02em; }
       #f08 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
       #f08 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
       #f08 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
       #f08 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
       #f08 .stage { position:absolute; perspective:2000px; }
-      #f08 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; }
+      #f08 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; transform-origin:50% 50%; }
       #f08 .panel video, #f08 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
       #f08 .yes { background:#27B54F; color:#06150B; }
       #f08 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
       #f08 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
 
-      #f08 .row { position:absolute; left:0; right:0; top:0; bottom:0; display:flex; align-items:center; justify-content:center; gap:80px; }
-      #f08 .logo { width:240px; height:240px; }
-      #f08 .x { font-size:64px; color:#6F7174; font-weight:400; }
-      #f08 .pl { font-size:120px; }
+      #f08 .w { display:inline-block; margin-right:0.24em; will-change:transform, opacity, filter; }
+      #f08 .ch { opacity:0; }
+
+      #f08 .a { position:absolute; left:0; right:0; top:330px; text-align:center; font-size:140px; color:#6F7174; }
+      #f08 .b { position:absolute; left:0; right:0; top:520px; text-align:center; font-size:170px; }
 
       </style>
       <div id="f08" data-composition-id="f08" data-width="1920" data-height="1080">
-
-        <div class="row"><img class="logo" src="assets/brand/favicon.png" alt="" /><span class="x">×</span><span class="hl pl">premier league</span></div>
-
+<div class="hl a"><span class="w " id="f08a-0">pundits</span><span class="w " id="f08a-1">argue.</span></div><div class="hl b"><span class="w " id="f08b-0">you</span><span class="w " id="f08b-1">predict.</span></div>
       </div>
       <script>
         const tl = gsap.timeline({ paused: true });
+tl.fromTo("#f08a-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.07);
+tl.fromTo("#f08a-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.63);
+tl.fromTo("#f08b-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.09);
+tl.fromTo("#f08b-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.42);
         window.__timelines["f08"] = tl;
       </script>
     </template>

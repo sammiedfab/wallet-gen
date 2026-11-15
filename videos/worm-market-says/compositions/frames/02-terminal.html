@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      @font-face { font-family:"Instrument Sans"; font-weight:400; src:url("assets/fonts/Instrument-Sans-wght-400.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:500; src:url("assets/fonts/Instrument-Sans-wght-500.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:600; src:url("assets/fonts/Instrument-Sans-wght-600.woff2") format("woff2"); }
+      @font-face { font-family:"DejaVu Sans Mono"; font-weight:400; src:url("assets/fonts/DejaVuSansMono.ttf") format("truetype"); }
+      @font-face { font-family:"VT323"; font-weight:400; src:url("assets/fonts/VT323.woff2") format("woff2"); }
+      #f02 { position:absolute; inset:0; overflow:hidden; background:radial-gradient(120% 90% at 50% 110%, #1E1F21 0%, #0B0B0C 55%, #050505 100%); color:#F4F4F2; font-family:"Instrument Sans", sans-serif; }
+      #f02 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
+      #f02 .dim { color:#7D7F82; }
+      #f02 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
+      #f02 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:28px; color:#8E9094; letter-spacing:0.02em; }
+      #f02 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
+      #f02 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
+      #f02 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
+      #f02 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
+      #f02 .stage { position:absolute; perspective:2000px; }
+      #f02 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; transform-origin:50% 50%; }
+      #f02 .panel video, #f02 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
+      #f02 .yes { background:#27B54F; color:#06150B; }
+      #f02 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
+      #f02 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
+
+      #f02 .w { display:inline-block; margin-right:0.24em; will-change:transform, opacity, filter; }
+      #f02 .ch { opacity:0; }
+
+      #f02 .box { position:absolute; left:360px; top:360px; transform-origin:0% 50%; }
+      #f02 .term { font-size:46px; }
+      #f02 .typed { display:inline-block; overflow:hidden; white-space:pre; vertical-align:bottom; width:0ch; }
+
+      </style>
+      <div id="f02" data-composition-id="f02" data-width="1920" data-height="1080">
+<div class="box term" id="f02-box"><div class="ln" id="f02-l0" style="opacity:0"><span class="dim">~ % </span><span class="typed" id="f02-t0">worm predict premier-league</span><span class="cursor" id="f02-k0" style="opacity:0"></span></div><div class="ln" id="f02-l1" style="opacity:0"><span class="typed" id="f02-t1">scanning 20 clubs...</span><span class="cursor" id="f02-k1" style="opacity:0"></span></div><div class="ln" id="f02-l2" style="opacity:0"><span class="typed" id="f02-t2">pricing epl 2027 champion...</span><span class="cursor" id="f02-k2" style="opacity:0"></span></div><div class="ln" id="f02-l3" style="opacity:0"><span class="typed" id="f02-t3">market says: arsenal 77%</span><span class="cursor" id="f02-k3" style="opacity:0"></span></div></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+tl.set("#f02-l0", {opacity:1}, 0.030000000000000002);
+tl.set("#f02-k0", {opacity:1}, 0.030000000000000002);
+tl.fromTo("#f02-t0", {width:"0ch"}, {width:"27ch", duration:1.0, ease:"steps(27)"}, 0.05);
+tl.set("#f02-k0", {opacity:0}, 1.27);
+tl.set("#f02-l1", {opacity:1}, 1.28);
+tl.set("#f02-k1", {opacity:1}, 1.28);
+tl.fromTo("#f02-t1", {width:"0ch"}, {width:"20ch", duration:0.65, ease:"steps(20)"}, 1.3);
+tl.set("#f02-k1", {opacity:0}, 2.12);
+tl.set("#f02-l2", {opacity:1}, 2.13);
+tl.set("#f02-k2", {opacity:1}, 2.13);
+tl.fromTo("#f02-t2", {width:"0ch"}, {width:"28ch", duration:0.8, ease:"steps(28)"}, 2.15);
+tl.set("#f02-k2", {opacity:0}, 3.12);
+tl.set("#f02-l3", {opacity:1}, 3.13);
+tl.set("#f02-k3", {opacity:1}, 3.13);
+tl.fromTo("#f02-t3", {width:"0ch"}, {width:"24ch", duration:0.7, ease:"steps(24)"}, 3.15);
+tl.to("#f02-k3", {opacity:0, duration:0.01, repeat:5, yoyo:true, repeatDelay:0.26}, 3.95);
+tl.fromTo("#f02-box", {scale:1}, {scale:1.04, duration:4.73, ease:"none"}, 0);
+        window.__timelines["f02"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

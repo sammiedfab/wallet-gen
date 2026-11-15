@@ -13,35 +13,48 @@
       #f05 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
       #f05 .dim { color:#7D7F82; }
       #f05 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
-      #f05 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:26px; color:#8E9094; letter-spacing:0.02em; }
+      #f05 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:28px; color:#8E9094; letter-spacing:0.02em; }
       #f05 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
       #f05 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
       #f05 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
       #f05 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
       #f05 .stage { position:absolute; perspective:2000px; }
-      #f05 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; }
+      #f05 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; transform-origin:50% 50%; }
       #f05 .panel video, #f05 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
       #f05 .yes { background:#27B54F; color:#06150B; }
       #f05 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
       #f05 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
 
-      #f05 .h { position:absolute; left:140px; top:250px; font-size:132px; }
-      #f05 .h2 { position:absolute; left:140px; top:420px; font-size:132px; }
-      #f05 .row { position:absolute; left:140px; top:660px; display:flex; gap:28px; }
+      #f05 .w { display:inline-block; margin-right:0.24em; will-change:transform, opacity, filter; }
+      #f05 .ch { opacity:0; }
+
+      #f05 .a { position:absolute; left:140px; top:200px; font-size:96px; color:#7D7F82; }
+      #f05 .b { position:absolute; left:140px; top:330px; font-size:132px; }
+      #f05 .c { position:absolute; left:140px; top:500px; font-size:132px; }
+      #f05 .row { position:absolute; left:140px; top:720px; display:flex; gap:28px; }
       #f05 .pill { height:130px; padding:0 64px; font-size:58px; }
-      #f05 .mono { position:absolute; left:144px; top:860px; font-size:32px; color:#A3A5A8; }
 
       </style>
       <div id="f05" data-composition-id="f05" data-width="1920" data-height="1080">
-
-        <div class="hl h">yes costs 77¢.</div>
-        <div class="hl h2"><span class="dim">right?</span> it pays $1.</div>
-        <div class="row"><span class="pill yes">Yes 77¢</span><span class="pill no">No 24¢</span></div>
-        <div class="mono">77% = the market's chance it happens. think higher? predict yes.</div>
-
+<div class="hl a"><span class="w " id="f05a-0">think</span><span class="w " id="f05a-1">it's</span><span class="w " id="f05a-2">higher?</span></div><div class="hl b"><span class="w " id="f05b-0">predict</span><span class="w " id="f05b-1">yes</span><span class="w " id="f05b-2">at</span><span class="w " id="f05b-3">77¢.</span></div><div class="hl c"><span class="w " id="f05c-0">right?</span><span class="w " id="f05c-1">it</span><span class="w " id="f05c-2">pays</span><span class="w " id="f05c-3">$1.</span></div>
+        <div class="row"><span class="pill yes" id="f05-yes">Yes 77¢</span><span class="pill no" id="f05-no">No 24¢</span></div>
       </div>
       <script>
         const tl = gsap.timeline({ paused: true });
+tl.fromTo("#f05a-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.03);
+tl.fromTo("#f05a-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.2);
+tl.fromTo("#f05a-2", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.4);
+tl.fromTo("#f05b-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.99);
+tl.fromTo("#f05b-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.52);
+tl.fromTo("#f05b-2", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.85);
+tl.fromTo("#f05b-3", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.95);
+tl.fromTo("#f05c-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.81);
+tl.fromTo("#f05c-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 4.32);
+tl.fromTo("#f05c-2", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 4.49);
+tl.fromTo("#f05c-3", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 4.83);
+tl.fromTo("#f05-yes", {scale:0.6, opacity:0}, {scale:1, opacity:1, duration:0.45, ease:"back.out(2.2)"}, 1.52);
+tl.fromTo("#f05-no", {scale:0.6, opacity:0}, {scale:1, opacity:1, duration:0.45, ease:"back.out(2.2)"}, 1.66);
+tl.to("#f05-yes", {scale:1.08, duration:0.18, yoyo:true, repeat:1, ease:"power2.out"}, 4.83);
         window.__timelines["f05"] = tl;
       </script>
     </template>
