@@ -29,7 +29,9 @@ Tone: sharp, punchy, sports-broadcast energy.
   Submit, the "To win $1" card, the live Arsenal position. The main proof footage.
 - assets/brand/favicon.png: the worm 3D chrome W, from worm.wtf.
 - assets/fonts: Instrument Sans (worm.wtf's own font), DejaVu Sans Mono (terminal), VT323 (CRT/pixel).
-- PENDING: the user will send music and sound effects.
+- assets/sfx/: click, key (typing), whoosh, whoosh-deep, pop, boom. CC0/bundled, matched to the SFX palette of the
+  reference post x.com/nexoxh/status/2121974531807998070 (see assets/sfx/CREDITS.md).
+- PENDING: the user's music track.
 
 ## Customizations
 
