@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      #f02 { position:absolute; inset:0; overflow:hidden; background:#0C100E; color:#EEF3F0; font-family:"Montserrat", sans-serif; }
+      #f02 .glow { position:absolute; border-radius:50%; pointer-events:none; background:radial-gradient(circle, rgba(18,183,106,0.30) 0%, rgba(18,183,106,0) 65%); }
+      #f02 .grid { position:absolute; inset:0; background-image:linear-gradient(rgba(238,243,240,0.06) 2px, transparent 2px), linear-gradient(90deg, rgba(238,243,240,0.06) 2px, transparent 2px); background-size:120px 120px; }
+      #f02 .mono { font-family:"Space Mono", monospace; font-size:26px; letter-spacing:0.08em; text-transform:uppercase; color:#9FB2A8; }
+      #f02 .disp { font-family:"League Gothic", sans-serif; text-transform:uppercase; line-height:0.9; letter-spacing:0.01em; }
+      #f02 .green { color:#19C37D; }
+      #f02 .pink { color:#F0509C; }
+      #f02 .tag { display:inline-block; font-family:"Space Mono", monospace; font-size:24px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:10px 18px; border-radius:10px; border:3px solid currentColor; }
+      #f02 .phone { position:absolute; width:440px; height:950px; border-radius:66px; background:#050606; border:12px solid #232826; box-shadow:0 40px 120px rgba(0,0,0,0.65), 0 0 0 2px rgba(238,243,240,0.10); overflow:hidden; }
+      #f02 .screen { position:absolute; inset:0; border-radius:54px; overflow:hidden; background:#121212; }
+      #f02 .screen video, #f02 .screen img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+      #f02 .chip { display:flex; align-items:center; gap:18px; font-family:"Space Mono", monospace; font-weight:700; font-size:28px; letter-spacing:0.04em; text-transform:uppercase; background:rgba(238,243,240,0.06); border:3px solid rgba(238,243,240,0.16); border-radius:16px; padding:20px 28px; }
+      #f02 .chip .dot { width:18px; height:18px; border-radius:50%; background:#19C37D; flex:none; }
+
+
+      #f02 .left { position:absolute; left:120px; top:120px; bottom:120px; width:1060px; display:flex; flex-direction:column; justify-content:center; gap:44px; }
+      #f02 .h { font-size:178px; }
+      #f02 .lead { font-size:40px; font-weight:600; color:#C9D6CF; }
+      #f02 .chips { display:flex; flex-direction:column; gap:20px; align-items:flex-start; }
+      #f02 .ph { right:250px; top:65px; transform:rotate(3deg); }
+      #f02 .placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; background:repeating-linear-gradient(45deg,#161a18 0 24px,#1b201d 24px 48px); text-align:center; padding:40px; }
+      #f02 .placeholder .mono { color:#EEF3F0; font-size:28px; }
+      #f02 .callout { position:absolute; right:60px; top:430px; display:flex; align-items:center; gap:0; }
+      #f02 .callout .line { width:150px; height:4px; background:#19C37D; }
+      #f02 .callout .ring { width:230px; height:110px; border:5px solid #19C37D; border-radius:24px; }
+
+      </style>
+      <div id="f02" data-composition-id="f02" data-width="1920" data-height="1080">
+
+        <div class="grid"></div>
+        <div class="glow" style="right:-200px;top:-100px;width:1200px;height:1200px;"></div>
+        <div class="left">
+          <span class="tag pink" style="align-self:flex-start">Premier League · on worm</span>
+          <div class="disp h">Every Premier League match. <span class="green">Live.</span></div>
+          <div class="chips">
+            <div class="chip"><span class="dot"></span>All 20 clubs</div>
+            <div class="chip"><span class="dot"></span>Live % on every match</div>
+            <div class="chip"><span class="dot"></span>Up to 3× leverage</div>
+          </div>
+        </div>
+        <div class="phone ph">
+          <div class="screen">
+            <div class="placeholder"><span class="mono">Your Premier League clip</span><span class="mono" style="color:#9FB2A8">PL tab → Newcastle vs Arsenal</span></div>
+          </div>
+        </div>
+
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+
+        window.__timelines["f02"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

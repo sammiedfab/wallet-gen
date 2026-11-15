@@ -9,7 +9,7 @@ mode: collaborative
 
 ## Frame 1: Hook (0-3.5s)
 - act: Hook
-- status: outline
+- status: built
 - duration: 3.5s
 - src: compositions/frames/01-hook.html
 - rules: kinetic slam type + number count-up
@@ -19,7 +19,7 @@ Cold open on the thesis. The giant number is the scroll-stopper.
 
 ## Frame 2: Premier League on worm (3.5-11s)
 - act: Show
-- status: outline
+- status: built
 - duration: 7.5s
 - src: compositions/frames/02-premier-league.html
 - rules: phone mockup + punch-in + callout labels
@@ -29,7 +29,7 @@ Covers judging criterion #1: a real Premier League market, explored on camera.
 
 ## Frame 3: What the % means (11-17s)
 - act: Explain
-- status: outline
+- status: built
 - duration: 6s
 - src: compositions/frames/03-what-percent-means.html
 - rules: stat hit + 10-dot pictogram + stepped reveal
@@ -39,7 +39,7 @@ Covers criterion #2: you understand how it works.
 
 ## Frame 4: My call (17-28s)
 - act: Proof
-- status: outline
+- status: built
 - duration: 11s
 - src: compositions/frames/04-my-call.html
 - rules: phone mockup, hard cuts inside, punch-ins, side ticker labels
@@ -47,7 +47,7 @@ Covers criterion #2: you understand how it works.
 
 ## Frame 5: Real account, real position (28-33s)
 - act: Proof
-- status: outline
+- status: built
 - duration: 5s
 - src: compositions/frames/05-proof.html
 - rules: two phones side by side + stamp
@@ -55,7 +55,7 @@ Covers criterion #2: you understand how it works.
 
 ## Frame 6: CTA (33-40s)
 - act: Close
-- status: outline
+- status: built
 - duration: 7s
 - src: compositions/frames/06-cta.html
 - rules: headline + link lockup
