@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      @font-face { font-family:"Instrument Sans"; font-weight:400; src:url("assets/fonts/Instrument-Sans-wght-400.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:500; src:url("assets/fonts/Instrument-Sans-wght-500.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:600; src:url("assets/fonts/Instrument-Sans-wght-600.woff2") format("woff2"); }
+      @font-face { font-family:"DejaVu Sans Mono"; font-weight:400; src:url("assets/fonts/DejaVuSansMono.ttf") format("truetype"); }
+      @font-face { font-family:"VT323"; font-weight:400; src:url("assets/fonts/VT323.woff2") format("woff2"); }
+      #f12 { position:absolute; inset:0; overflow:hidden; background:radial-gradient(120% 90% at 50% 110%, #1E1F21 0%, #0B0B0C 55%, #050505 100%); color:#F4F4F2; font-family:"Instrument Sans", sans-serif; }
+      #f12 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
+      #f12 .dim { color:#7D7F82; }
+      #f12 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
+      #f12 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:28px; color:#8E9094; letter-spacing:0.02em; }
+      #f12 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
+      #f12 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
+      #f12 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
+      #f12 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
+      #f12 .stage { position:absolute; perspective:2000px; }
+      #f12 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; transform-origin:50% 50%; }
+      #f12 .panel video, #f12 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
+      #f12 .yes { background:#27B54F; color:#06150B; }
+      #f12 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
+      #f12 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
+
+      #f12 .w { display:inline-block; margin-right:0.24em; will-change:transform, opacity, filter; }
+      #f12 .ch { opacity:0; }
+
+      #f12 .a { position:absolute; left:0; right:0; top:330px; text-align:center; font-size:140px; color:#6F7174; }
+      #f12 .b { position:absolute; left:0; right:0; top:520px; text-align:center; font-size:170px; }
+
+      </style>
+      <div id="f12" data-composition-id="f12" data-width="1920" data-height="1080">
+<div class="hl a"><span class="w " id="f12a-0">pundits</span><span class="w " id="f12a-1">argue.</span></div><div class="hl b"><span class="w " id="f12b-0">you</span><span class="w " id="f12b-1">predict.</span></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+tl.fromTo("#f12a-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.09);
+tl.fromTo("#f12a-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.67);
+tl.fromTo("#f12b-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.31);
+tl.fromTo("#f12b-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.63);
+        window.__timelines["f12"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      @font-face { font-family:"Instrument Sans"; font-weight:400; src:url("assets/fonts/Instrument-Sans-wght-400.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:500; src:url("assets/fonts/Instrument-Sans-wght-500.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:600; src:url("assets/fonts/Instrument-Sans-wght-600.woff2") format("woff2"); }
+      @font-face { font-family:"DejaVu Sans Mono"; font-weight:400; src:url("assets/fonts/DejaVuSansMono.ttf") format("truetype"); }
+      @font-face { font-family:"VT323"; font-weight:400; src:url("assets/fonts/VT323.woff2") format("woff2"); }
+      #f14 { position:absolute; inset:0; overflow:hidden; background:radial-gradient(120% 90% at 50% 110%, #1E1F21 0%, #0B0B0C 55%, #050505 100%); color:#F4F4F2; font-family:"Instrument Sans", sans-serif; }
+      #f14 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
+      #f14 .dim { color:#7D7F82; }
+      #f14 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
+      #f14 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:28px; color:#8E9094; letter-spacing:0.02em; }
+      #f14 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
+      #f14 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
+      #f14 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
+      #f14 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
+      #f14 .stage { position:absolute; perspective:2000px; }
+      #f14 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; transform-origin:50% 50%; }
+      #f14 .panel video, #f14 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
+      #f14 .yes { background:#27B54F; color:#06150B; }
+      #f14 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
+      #f14 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
+
+      #f14 .w { display:inline-block; margin-right:0.24em; will-change:transform, opacity, filter; }
+      #f14 .ch { opacity:0; }
+
+      #f14 .white { position:absolute; inset:0; background:#F7F7F5; color:#0B0B0C; }
+      #f14 .card { position:absolute; inset:0; transform-origin:50% 50%; }
+      #f14 .k { position:absolute; left:0; right:0; top:360px; text-align:center; font-size:56px; color:#5D5F62; letter-spacing:-0.02em; }
+      #f14 .url { position:absolute; left:0; right:0; top:470px; text-align:center; font-size:140px; }
+
+      </style>
+      <div id="f14" data-composition-id="f14" data-width="1920" data-height="1080">
+<div class="white"><div class="card" id="f14-card">
+          <div class="k" id="f14-k">predict the premier league on worm</div>
+          <div class="hl url" id="f14-url">worm.wtf/r/sammiedfab</div>
+        </div></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#f14-card", {scale:0.96}, {scale:1.06, duration:5.3, ease:"none"}, 0);
+tl.fromTo("#f14-k", {opacity:0, y:20}, {opacity:1, y:0, duration:0.45, ease:"power3.out"}, 0.05);
+tl.fromTo("#f14-url", {opacity:0, y:30, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.55, ease:"power3.out"}, 0.2);
+        window.__timelines["f14"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 41.1s
+duration: 64.1s
 message: "The market puts a number on every Premier League match. Make your call on worm."
 arc: Hook → Terminal → 77% drop → PL on worm → What % means → My call → Proof → You predict → Lockup → CTA
 audience: Superteam Earn judges and football fans on X
@@ -8,52 +8,58 @@ mode: collaborative
 audio: Polygon bed (carved under the voice) + ElevenLabs VO (Roger) split at 5.33s so "seventy-seven percent" lands on the 8.45s drop
 ---
 
-## Frame 1: Pundits hook (0-3.72s)
+## Frame 1: Pundits hook (0-3.75)
 - status: animated
 - src: compositions/frames/01-hook.html
-- scene: every week, pundits argue / about the premier league. Word by word with the voice.
 
-## Frame 2: Terminal (3.72-8.45s)
+## Frame 2: Terminal (3.75-8.45)
 - status: animated
 - src: compositions/frames/02-terminal.html
-- scene: Typed: worm predict premier-league → market says: arsenal 77%. The cursor blinks through the music's silence.
 
-## Frame 3: 77% (8.45-13.4s)
+## Frame 3: 77% drop (8.45-13.95)
 - status: animated
 - src: compositions/frames/03-big-number.html
-- scene: The beat drops on 77% with a flash and RGB fringe, then 'the market's chance arsenal win the league.'
 
-## Frame 4: Premier League on worm (13.4-19.1s)
+## Frame 4: Predict every match (13.95-18.9)
 - status: animated
 - src: compositions/frames/04-premier-league.html
-- scene: Tilted panel: PL tab → EPL 2027 Champion → Arsenal 77%. every premier league market. live on worm. all 20 clubs. every match.
 
-## Frame 5: What the % means (19.1-24.7s)
+## Frame 5: Live % (18.9-23.4)
 - status: animated
-- src: compositions/frames/05-what-percent.html
-- scene: think it's higher? predict yes at 77¢. right? it pays $1. Yes/No pills pop.
+- src: compositions/frames/05-live.html
 
-## Frame 6: My call (24.7-30.5s)
+## Frame 6: What the % means (23.4-29.1)
 - status: animated
-- src: compositions/frames/06-my-call.html
-- scene: Panel cuts: $1 → $1.33, Submit, To win $1. i made my call. $1 in → $1.33 back if arsenal lift the trophy.
+- src: compositions/frames/06-what-percent.html
 
-## Frame 7: Proof (30.5-32.5s)
+## Frame 7: 3× leverage (29.1-32.95)
 - status: animated
-- src: compositions/frames/07-proof.html
-- scene: real account. real prediction. Live Arsenal position.
+- src: compositions/frames/07-leverage.html
 
-## Frame 8: You predict (32.5-34.5s)
+## Frame 8: My call (32.95-39.1)
 - status: animated
-- src: compositions/frames/08-you-predict.html
-- scene: pundits argue. you predict.
+- src: compositions/frames/08-my-call.html
 
-## Frame 9: Lockup (34.5-36.2s)
+## Frame 9: Proof (39.1-41.5)
 - status: animated
-- src: compositions/frames/09-lockup.html
-- scene: worm W × premier league, then make your call on worm.
+- src: compositions/frames/09-proof.html
 
-## Frame 10: CTA (36.2-41.1s)
+## Frame 10: Weekly prize pool (41.5-47.8)
 - status: animated
-- src: compositions/frames/10-cta.html
-- scene: White card that slowly grows: worm.wtf/r/sammiedfab, @wormwtf · link below. The music tails out.
+- src: compositions/frames/10-prize-pool.html
+
+## Frame 11: Referral 30% (47.8-54.3)
+- status: animated
+- src: compositions/frames/11-referral.html
+
+## Frame 12: You predict (54.3-56.95)
+- status: animated
+- src: compositions/frames/12-you-predict.html
+
+## Frame 13: Lockup (56.95-58.8)
+- status: animated
+- src: compositions/frames/13-lockup.html
+
+## Frame 14: CTA (58.8-64.1)
+- status: animated
+- src: compositions/frames/14-cta.html

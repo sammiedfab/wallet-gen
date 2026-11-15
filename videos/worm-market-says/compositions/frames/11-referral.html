@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      @font-face { font-family:"Instrument Sans"; font-weight:400; src:url("assets/fonts/Instrument-Sans-wght-400.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:500; src:url("assets/fonts/Instrument-Sans-wght-500.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:600; src:url("assets/fonts/Instrument-Sans-wght-600.woff2") format("woff2"); }
+      @font-face { font-family:"DejaVu Sans Mono"; font-weight:400; src:url("assets/fonts/DejaVuSansMono.ttf") format("truetype"); }
+      @font-face { font-family:"VT323"; font-weight:400; src:url("assets/fonts/VT323.woff2") format("woff2"); }
+      #f11 { position:absolute; inset:0; overflow:hidden; background:radial-gradient(120% 90% at 50% 110%, #1E1F21 0%, #0B0B0C 55%, #050505 100%); color:#F4F4F2; font-family:"Instrument Sans", sans-serif; }
+      #f11 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
+      #f11 .dim { color:#7D7F82; }
+      #f11 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
+      #f11 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:28px; color:#8E9094; letter-spacing:0.02em; }
+      #f11 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
+      #f11 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
+      #f11 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
+      #f11 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
+      #f11 .stage { position:absolute; perspective:2000px; }
+      #f11 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; transform-origin:50% 50%; }
+      #f11 .panel video, #f11 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
+      #f11 .yes { background:#27B54F; color:#06150B; }
+      #f11 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
+      #f11 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
+
+      #f11 .w { display:inline-block; margin-right:0.24em; will-change:transform, opacity, filter; }
+      #f11 .ch { opacity:0; }
+
+      #f11 .stage { right:250px; top:100px; width:470px; height:880px; }
+      #f11 .mono { position:absolute; left:144px; top:250px; }
+      #f11 .h { position:absolute; left:140px; top:310px; width:1000px; font-size:96px; }
+      #f11 .h .g { color:#27B54F; }
+      #f11 .s { position:absolute; left:144px; top:700px; width:1000px; font-size:68px; color:#A3A5A8; }
+
+      </style>
+      <div id="f11" data-composition-id="f11" data-width="1920" data-height="1080">
+<div class="mono" id="f11-crumb">invite &amp; earn · worm.wtf/r/sammiedfab</div>
+        <div class="hl h"><span class="w " id="f11a-0">refer</span><span class="w " id="f11a-1">friends.</span><span class="w " id="f11a-2">earn</span><span class="w " id="f11a-3">up</span><span class="w " id="f11a-4">to</span><span class="w " id="f11a-5"><span class='g'>30%</span></span><span class="w " id="f11a-6">of</span><span class="w " id="f11a-7">their</span><span class="w " id="f11a-8">trading</span><span class="w " id="f11a-9">fees</span></div><div class="hl s"><span class="w " id="f11b-0">for</span><span class="w " id="f11b-1">90</span><span class="w " id="f11b-2">days,</span><span class="w " id="f11b-3">paid</span><span class="w " id="f11b-4">in</span><span class="w " id="f11b-5">usdc.</span></div>
+        <div class="stage"><div class="panel" id="f11-p"><video id="f11-v1" class="clip" src="assets/profile-ref.mp4" muted playsinline data-start="0" data-duration="6.5" data-media-start="15.4" data-playback-rate="0.38" data-track-index="0"></video></div></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+tl.fromTo("#f11a-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.07);
+tl.fromTo("#f11a-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.7);
+tl.fromTo("#f11a-2", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.38);
+tl.fromTo("#f11a-3", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.66);
+tl.fromTo("#f11a-4", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.8);
+tl.fromTo("#f11a-5", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.94);
+tl.fromTo("#f11a-6", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 2.45);
+tl.fromTo("#f11a-7", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 2.53);
+tl.fromTo("#f11a-8", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 2.73);
+tl.fromTo("#f11a-9", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 2.94);
+tl.fromTo("#f11b-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.43);
+tl.fromTo("#f11b-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.74);
+tl.fromTo("#f11b-2", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 4.42);
+tl.fromTo("#f11b-3", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 5.08);
+tl.fromTo("#f11b-4", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 5.55);
+tl.fromTo("#f11b-5", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 5.75);
+tl.fromTo("#f11-p", {x:260, rotationY:-40, rotationX:8, rotationZ:1, opacity:0, scale:0.92}, {x:0, rotationY:-18, rotationX:6, rotationZ:1, opacity:1, scale:1, duration:0.8, ease:"power3.out"}, 0);
+tl.to("#f11-p", {rotationY:-10, y:-18, duration:5.7, ease:"none"}, 0.8);
+tl.fromTo("#f11-crumb",{opacity:0},{opacity:1,duration:0.4},0.1);
+        window.__timelines["f11"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

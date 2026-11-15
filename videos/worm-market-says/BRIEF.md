@@ -7,7 +7,7 @@ destination: x-feed
 aspect: 1920x1080
 language: en
 audience: Superteam Earn judges and football fans on X
-length: 41s
+length: 64s
 angle: proof-walkthrough
 ---
 
@@ -34,7 +34,9 @@ Tone: sharp, punchy, sports-broadcast energy.
 - assets/audio/polygon-bed.mp3: the full audio track (music with its sound effects baked in) from x.com/0xpolygon/status/2114723012045906233,
   as the user asked. 41.1s, 125 BPM. Beat drop at 8.5s, tail fade from 38.5s. Third-party audio, kept out of git.
 - assets/sfx/: CC0 kit, kept as a fallback if the Polygon audio can't be used.
-- PENDING: the user's ElevenLabs voiceover, recorded from SCRIPT.md.
+- assets/audio/vo2.mp3: ElevenLabs voiceover v2 (Roger), 55.8s, recorded from SCRIPT.md v2. Split at 5.18s so "seventy-seven percent" lands on the drop.
+- assets/audio/polygon-bed-ext.mp3: the Polygon bed extended to 64.2s by repeating 12 bars (13.565–36.605s, 48 beats).
+- assets/brand/prize-pool.png: capture of worm.wtf's Premier League Weekly Prize Pool card ($1,500, countdown). No user handles shown.
 
 ## Customizations
 
@@ -48,6 +50,9 @@ Tone: sharp, punchy, sports-broadcast energy.
 - Persistent @sammiedfab handle in the lower-right corner for the whole video (inverts on the white end card).
 
 ## Notes
+
+- v2 adds: predict every match, live % that moves, up to 3× leverage, the weekly top-10 prize pool until half season,
+  and up to 30% referral fees for 90 days in USDC. The end card has no "link below" line.
 
 - Wording: say "predict", "make your call", "chance". Never "bet", "odds", "wager", "stake", "gamble".
 - Crop out "Bigger bets, bigger fees" on the referral page, and leave out the Bitcoin market.

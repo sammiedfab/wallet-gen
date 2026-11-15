@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      @font-face { font-family:"Instrument Sans"; font-weight:400; src:url("assets/fonts/Instrument-Sans-wght-400.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:500; src:url("assets/fonts/Instrument-Sans-wght-500.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:600; src:url("assets/fonts/Instrument-Sans-wght-600.woff2") format("woff2"); }
+      @font-face { font-family:"DejaVu Sans Mono"; font-weight:400; src:url("assets/fonts/DejaVuSansMono.ttf") format("truetype"); }
+      @font-face { font-family:"VT323"; font-weight:400; src:url("assets/fonts/VT323.woff2") format("woff2"); }
+      #f10 { position:absolute; inset:0; overflow:hidden; background:radial-gradient(120% 90% at 50% 110%, #1E1F21 0%, #0B0B0C 55%, #050505 100%); color:#F4F4F2; font-family:"Instrument Sans", sans-serif; }
+      #f10 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
+      #f10 .dim { color:#7D7F82; }
+      #f10 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
+      #f10 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:28px; color:#8E9094; letter-spacing:0.02em; }
+      #f10 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
+      #f10 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
+      #f10 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
+      #f10 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
+      #f10 .stage { position:absolute; perspective:2000px; }
+      #f10 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; transform-origin:50% 50%; }
+      #f10 .panel video, #f10 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
+      #f10 .yes { background:#27B54F; color:#06150B; }
+      #f10 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
+      #f10 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
+
+      #f10 .w { display:inline-block; margin-right:0.24em; will-change:transform, opacity, filter; }
+      #f10 .ch { opacity:0; }
+
+      #f10 .stage { left:260px; top:100px; width:470px; height:880px; }
+      #f10 .panel img.fit { top:0; height:100%; object-fit:cover; object-position:top; }
+      #f10 .mono { position:absolute; left:904px; top:250px; }
+      #f10 .h { position:absolute; left:900px; top:310px; width:900px; font-size:104px; }
+      #f10 .h .g { color:#E0408F; }
+      #f10 .s { position:absolute; left:904px; top:680px; width:880px; font-size:68px; color:#A3A5A8; }
+
+      </style>
+      <div id="f10" data-composition-id="f10" data-width="1920" data-height="1080">
+<div class="mono" id="f10-crumb">premier league · weekly prize pool</div>
+        <div class="hl h"><span class="w " id="f10a-0">every</span><span class="w " id="f10a-1">week,</span><span class="w " id="f10a-2">the</span><span class="w " id="f10a-3"><span class='g'>top</span></span><span class="w " id="f10a-4"><span class='g'>10</span></span><span class="w " id="f10a-5">traders</span><span class="w " id="f10a-6">share</span><span class="w " id="f10a-7">a</span><span class="w " id="f10a-8">prize</span><span class="w " id="f10a-9">pool,</span></div><div class="hl s"><span class="w " id="f10b-0">all</span><span class="w " id="f10b-1">the</span><span class="w " id="f10b-2">way</span><span class="w " id="f10b-3">to</span><span class="w " id="f10b-4">half</span><span class="w " id="f10b-5">season.</span></div>
+        <div class="stage"><div class="panel" id="f10-p"><img class="fit" src="assets/brand/prize-pool.png" alt="" /></div></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+tl.fromTo("#f10a-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.05);
+tl.fromTo("#f10a-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.32);
+tl.fromTo("#f10a-2", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.66);
+tl.fromTo("#f10a-3", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.97);
+tl.fromTo("#f10a-4", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.13);
+tl.fromTo("#f10a-5", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 2.17);
+tl.fromTo("#f10a-6", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.17);
+tl.fromTo("#f10a-7", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.56);
+tl.fromTo("#f10a-8", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.64);
+tl.fromTo("#f10a-9", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 4.09);
+tl.fromTo("#f10b-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 4.59);
+tl.fromTo("#f10b-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 4.76);
+tl.fromTo("#f10b-2", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 4.98);
+tl.fromTo("#f10b-3", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 5.2);
+tl.fromTo("#f10b-4", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 5.35);
+tl.fromTo("#f10b-5", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 5.65);
+tl.fromTo("#f10-p", {x:-260, rotationY:40, rotationX:8, rotationZ:-1, opacity:0, scale:0.92}, {x:0, rotationY:16, rotationX:6, rotationZ:-1, opacity:1, scale:1, duration:0.8, ease:"power3.out"}, 0);
+tl.to("#f10-p", {rotationY:8, y:-18, duration:5.5, ease:"none"}, 0.8);
+tl.fromTo("#f10-crumb",{opacity:0},{opacity:1,duration:0.4},0.1);
+        window.__timelines["f10"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

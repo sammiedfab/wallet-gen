@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      @font-face { font-family:"Instrument Sans"; font-weight:400; src:url("assets/fonts/Instrument-Sans-wght-400.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:500; src:url("assets/fonts/Instrument-Sans-wght-500.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:600; src:url("assets/fonts/Instrument-Sans-wght-600.woff2") format("woff2"); }
+      @font-face { font-family:"DejaVu Sans Mono"; font-weight:400; src:url("assets/fonts/DejaVuSansMono.ttf") format("truetype"); }
+      @font-face { font-family:"VT323"; font-weight:400; src:url("assets/fonts/VT323.woff2") format("woff2"); }
+      #f05 { position:absolute; inset:0; overflow:hidden; background:radial-gradient(120% 90% at 50% 110%, #1E1F21 0%, #0B0B0C 55%, #050505 100%); color:#F4F4F2; font-family:"Instrument Sans", sans-serif; }
+      #f05 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
+      #f05 .dim { color:#7D7F82; }
+      #f05 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
+      #f05 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:28px; color:#8E9094; letter-spacing:0.02em; }
+      #f05 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
+      #f05 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
+      #f05 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
+      #f05 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
+      #f05 .stage { position:absolute; perspective:2000px; }
+      #f05 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; transform-origin:50% 50%; }
+      #f05 .panel video, #f05 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
+      #f05 .yes { background:#27B54F; color:#06150B; }
+      #f05 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
+      #f05 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
+
+      #f05 .w { display:inline-block; margin-right:0.24em; will-change:transform, opacity, filter; }
+      #f05 .ch { opacity:0; }
+
+      #f05 .stage { left:260px; top:100px; width:470px; height:880px; }
+      #f05 .mono { position:absolute; left:904px; top:300px; }
+      #f05 .h { position:absolute; left:900px; top:360px; width:900px; font-size:112px; }
+      #f05 .h .g { color:#27B54F; }
+      #f05 .s { position:absolute; left:904px; top:620px; width:880px; font-size:68px; color:#A3A5A8; }
+
+      </style>
+      <div id="f05" data-composition-id="f05" data-width="1920" data-height="1080">
+<div class="mono" id="f05-crumb">epl: 2027 champion · live</div>
+        <div class="hl h"><span class="w " id="f05a-0">every</span><span class="w " id="f05a-1">outcome</span><span class="w " id="f05a-2">is</span><span class="w " id="f05a-3">a</span><span class="w " id="f05a-4"><span class='g'>live %</span></span></div><div class="hl s"><span class="w " id="f05b-0">it</span><span class="w " id="f05b-1">moves</span><span class="w " id="f05b-2">as</span><span class="w " id="f05b-3">the</span><span class="w " id="f05b-4">match</span><span class="w " id="f05b-5">plays</span><span class="w " id="f05b-6">out.</span></div>
+        <div class="stage"><div class="panel" id="f05-p"><video id="f05-v1" class="clip" src="assets/pl-arsenal.mp4" muted playsinline data-start="0" data-duration="4.5" data-media-start="4.2" data-playback-rate="0.5" data-track-index="0"></video></div></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+tl.fromTo("#f05a-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.09);
+tl.fromTo("#f05a-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 0.44);
+tl.fromTo("#f05a-2", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.01);
+tl.fromTo("#f05a-3", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.11);
+tl.fromTo("#f05a-4", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 1.18);
+tl.fromTo("#f05b-0", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 2.49);
+tl.fromTo("#f05b-1", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 2.61);
+tl.fromTo("#f05b-2", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 2.99);
+tl.fromTo("#f05b-3", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.14);
+tl.fromTo("#f05b-4", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.41);
+tl.fromTo("#f05b-5", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 3.74);
+tl.fromTo("#f05b-6", {opacity:0, y:28, filter:"blur(10px)"}, {opacity:1, y:0, filter:"blur(0px)", duration:0.32, ease:"power3.out"}, 4.1);
+tl.fromTo("#f05-p", {x:-260, rotationY:40, rotationX:8, rotationZ:-1, opacity:0, scale:0.92}, {x:0, rotationY:16, rotationX:6, rotationZ:-1, opacity:1, scale:1, duration:0.8, ease:"power3.out"}, 0);
+tl.to("#f05-p", {rotationY:9, y:-18, duration:3.7, ease:"none"}, 0.8);
+tl.fromTo("#f05-crumb",{opacity:0},{opacity:1,duration:0.4},0.1);
+        window.__timelines["f05"] = tl;
+      </script>
+    </template>
+  </body>
+</html>
