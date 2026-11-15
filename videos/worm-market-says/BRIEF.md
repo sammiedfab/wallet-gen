@@ -7,7 +7,7 @@ destination: x-feed
 aspect: 1920x1080
 language: en
 audience: Superteam Earn judges and football fans on X
-length: 44s
+length: 41s
 angle: proof-walkthrough
 ---
 
@@ -31,7 +31,10 @@ Tone: sharp, punchy, sports-broadcast energy.
 - assets/fonts: Instrument Sans (worm.wtf's own font), DejaVu Sans Mono (terminal), VT323 (CRT/pixel).
 - assets/sfx/: click, key (typing), whoosh, whoosh-deep, pop, boom. CC0/bundled, matched to the SFX palette of the
   reference post x.com/nexoxh/status/2121974531807998070 (see assets/sfx/CREDITS.md).
-- PENDING: the user's music track.
+- assets/audio/polygon-bed.mp3: the full audio track (music with its sound effects baked in) from x.com/0xpolygon/status/2114723012045906233,
+  as the user asked. 41.1s, 125 BPM. Beat drop at 8.5s, tail fade from 38.5s. Third-party audio, kept out of git.
+- assets/sfx/: CC0 kit, kept as a fallback if the Polygon audio can't be used.
+- PENDING: the user's ElevenLabs voiceover, recorded from SCRIPT.md.
 
 ## Customizations
 

@@ -5,3 +5,5 @@ renders/
 assets/*.png
 boards/stills/
 assets/fonts/*.ttf
+assets/audio/polygon-bed.mp3
+beats/
