@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      @font-face { font-family:"Instrument Sans"; font-weight:400; src:url("assets/fonts/Instrument-Sans-wght-400.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:500; src:url("assets/fonts/Instrument-Sans-wght-500.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:600; src:url("assets/fonts/Instrument-Sans-wght-600.woff2") format("woff2"); }
+      @font-face { font-family:"DejaVu Sans Mono"; font-weight:400; src:url("assets/fonts/DejaVuSansMono.ttf") format("truetype"); }
+      @font-face { font-family:"VT323"; font-weight:400; src:url("assets/fonts/VT323.woff2") format("woff2"); }
+      #f04 { position:absolute; inset:0; overflow:hidden; background:radial-gradient(120% 90% at 50% 110%, #1E1F21 0%, #0B0B0C 55%, #050505 100%); color:#F4F4F2; font-family:"Instrument Sans", sans-serif; }
+      #f04 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
+      #f04 .dim { color:#7D7F82; }
+      #f04 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
+      #f04 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:26px; color:#8E9094; letter-spacing:0.02em; }
+      #f04 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
+      #f04 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
+      #f04 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
+      #f04 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
+      #f04 .stage { position:absolute; perspective:2000px; }
+      #f04 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; }
+      #f04 .panel video, #f04 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
+      #f04 .yes { background:#27B54F; color:#06150B; }
+      #f04 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
+      #f04 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
+
+      #f04 .stage { right:250px; top:80px; width:470px; height:920px; }
+      #f04 .panel { transform:rotateY(-18deg) rotateX(6deg) rotateZ(1deg); }
+      #f04 .h { position:absolute; left:140px; top:330px; width:1000px; font-size:112px; }
+      #f04 .sub { position:absolute; left:144px; top:600px; font-size:44px; color:#A3A5A8; letter-spacing:-0.02em; }
+      #f04 .mono { position:absolute; left:144px; top:250px; }
+
+      </style>
+      <div id="f04" data-composition-id="f04" data-width="1920" data-height="1080">
+
+        <div class="mono">sports › premier league › epl: 2027 champion</div>
+        <div class="hl h">every premier league market. live.</div>
+        <div class="sub">all 20 clubs, live % on every match, up to 3x leverage.</div>
+        <div class="stage"><div class="panel"><video id="f04-v1" class="clip" src="assets/pl-arsenal.mp4" muted playsinline data-start="0" data-duration="7" data-media-start="0.5" data-track-index="0"></video></div></div>
+
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        window.__timelines["f04"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

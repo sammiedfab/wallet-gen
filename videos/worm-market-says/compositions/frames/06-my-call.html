@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+      @font-face { font-family:"Instrument Sans"; font-weight:400; src:url("assets/fonts/Instrument-Sans-wght-400.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:500; src:url("assets/fonts/Instrument-Sans-wght-500.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Sans"; font-weight:600; src:url("assets/fonts/Instrument-Sans-wght-600.woff2") format("woff2"); }
+      @font-face { font-family:"DejaVu Sans Mono"; font-weight:400; src:url("assets/fonts/DejaVuSansMono.ttf") format("truetype"); }
+      @font-face { font-family:"VT323"; font-weight:400; src:url("assets/fonts/VT323.woff2") format("woff2"); }
+      #f06 { position:absolute; inset:0; overflow:hidden; background:radial-gradient(120% 90% at 50% 110%, #1E1F21 0%, #0B0B0C 55%, #050505 100%); color:#F4F4F2; font-family:"Instrument Sans", sans-serif; }
+      #f06 .hl { font-weight:500; letter-spacing:-0.045em; line-height:0.98; }
+      #f06 .dim { color:#7D7F82; }
+      #f06 .term { font-family:"DejaVu Sans Mono", monospace; font-size:40px; line-height:1.6; color:#E9E9E6; }
+      #f06 .mono { font-family:"DejaVu Sans Mono", monospace; font-size:26px; color:#8E9094; letter-spacing:0.02em; }
+      #f06 .px { font-family:"VT323", monospace; text-transform:uppercase; letter-spacing:0.06em; }
+      #f06 .cursor { display:inline-block; width:0.6em; height:0.12em; background:#E9E9E6; vertical-align:-0.05em; }
+      #f06 .fringe { text-shadow:-5px 0 0 rgba(255,40,80,0.55), 5px 0 0 rgba(40,140,255,0.55); }
+      #f06 .scan { position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg, rgba(0,0,0,0.28) 0 2px, transparent 2px 5px); mix-blend-mode:multiply; }
+      #f06 .stage { position:absolute; perspective:2000px; }
+      #f06 .panel { position:absolute; width:470px; height:880px; border-radius:44px; overflow:hidden; background:#121212; border:2px solid rgba(255,255,255,0.10); box-shadow:0 60px 140px rgba(0,0,0,0.75); transform-style:preserve-3d; }
+      #f06 .panel video, #f06 .panel img { position:absolute; left:0; top:-44px; width:100%; height:auto; }
+      #f06 .yes { background:#27B54F; color:#06150B; }
+      #f06 .no { background:rgba(255,255,255,0.08); color:#D9D9D6; }
+      #f06 .pill { display:inline-flex; align-items:center; justify-content:center; font-weight:600; letter-spacing:-0.02em; border-radius:999px; }
+
+      #f06 .stage { left:260px; top:80px; width:470px; height:920px; }
+      #f06 .panel { transform:rotateY(16deg) rotateX(5deg) rotateZ(-1deg); }
+      #f06 .h { position:absolute; left:900px; top:330px; font-size:120px; }
+      #f06 .s1 { position:absolute; left:904px; top:500px; font-size:56px; letter-spacing:-0.03em; }
+      #f06 .s1 b { color:#27B54F; font-weight:600; }
+      #f06 .mono { position:absolute; left:904px; top:260px; }
+
+      </style>
+      <div id="f06" data-composition-id="f06" data-width="1920" data-height="1080">
+
+        <div class="mono">epl: 2027 champion · arsenal · yes</div>
+        <div class="hl h">i made my call.</div>
+        <div class="s1">$1 in → <b>$1.33</b> if arsenal win it.</div>
+        <div class="stage"><div class="panel"><video id="f06-v1" class="clip" src="assets/pl-arsenal.mp4" muted playsinline data-start="0" data-duration="3" data-media-start="9.8" data-track-index="0"></video><video id="f06-v2" class="clip" src="assets/pl-arsenal.mp4" muted playsinline data-start="3" data-duration="2" data-media-start="12.3" data-track-index="0"></video><video id="f06-v3" class="clip" src="assets/pl-arsenal.mp4" muted playsinline data-start="5" data-duration="4" data-media-start="26" data-track-index="0"></video></div></div>
+
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        window.__timelines["f06"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

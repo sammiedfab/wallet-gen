@@ -1,62 +1,63 @@
 ---
 format: 1920x1080
-duration: 40s
+duration: 44s
 message: "The market puts a number on every Premier League match. Make your call on worm."
-arc: Hook → Premier League on worm → What the % means → My call → Proof → CTA
+arc: Terminal hook → 77% → Pundits vs market → PL on worm → What the % means → My call → Proof → Lockup → CTA
 audience: Superteam Earn judges and football fans on X
 mode: collaborative
+style: worm house style (Instrument Sans, terminal, CRT fringe, tilted UI panels, monochrome)
 ---
 
-## Frame 1: Hook (0-3.5s)
+## Frame 1: Terminal hook (0-4.5s)
 - act: Hook
 - status: built
-- duration: 3.5s
-- src: compositions/frames/01-hook.html
-- rules: kinetic slam type + number count-up
-- scene: "PUNDITS ARGUE." slams in, then "THE MARKET PUTS A NUMBER ON IT." while a giant % counts up.
+- src: compositions/frames/01-terminal.html
+- scene: Typed terminal with blinking cursor: worm predict premier-league / scanning 20 clubs / pricing epl 2027 champion / market says: arsenal 77%
 
-Cold open on the thesis. The giant number is the scroll-stopper.
+## Frame 2: 77% (4.5-9.5s)
+- act: Hook
+- status: built
+- src: compositions/frames/02-big-number.html
+- scene: Hard cut to a giant 77% with a CRT/RGB fringe hit. "arsenal to win the 2027 premier league." builds word by word.
 
-## Frame 2: Premier League on worm (3.5-11s)
+## Frame 3: Pundits vs market (9.5-12.5s)
+- act: Hook
+- status: built
+- src: compositions/frames/03-pundits.html
+- scene: "pundits argue." then "the market puts a number on it." word by word
+
+## Frame 4: Premier League on worm (12.5-19.5s)
 - act: Show
 - status: built
-- duration: 7.5s
-- src: compositions/frames/02-premier-league.html
-- rules: phone mockup + punch-in + callout labels
-- scene: Phone plays the user's PL clip. Callouts read "All 20 clubs" and "Live % on every match". Headline: "Every Premier League match. Live on worm."
+- src: compositions/frames/04-premier-league.html
+- scene: Tilted floating panel plays the user's PL clip (PL tab, EPL 2027 Champion, chart, Arsenal 77%). Headline: every premier league market. live.
 
-Covers judging criterion #1: a real Premier League market, explored on camera.
-
-## Frame 3: What the % means (11-17s)
+## Frame 5: What the % means (19.5-25s)
 - act: Explain
 - status: built
-- duration: 6s
-- src: compositions/frames/03-what-percent-means.html
-- rules: stat hit + 10-dot pictogram + stepped reveal
-- scene: "49%" fills 5 of 10 dots, labeled "= the market's chance it happens". Then "Predict YES at 49¢ → get $1 if you're right."
+- src: compositions/frames/05-what-percent.html
+- scene: yes costs 77¢. right? it pays $1. Yes/No pills in app green. 77% = the market's chance it happens.
 
-Covers criterion #2: you understand how it works.
-
-## Frame 4: My call (17-28s)
+## Frame 6: My call (25-34s)
 - act: Proof
 - status: built
-- duration: 11s
-- src: compositions/frames/04-my-call.html
-- rules: phone mockup, hard cuts inside, punch-ins, side ticker labels
-- scene: The real buy flow. Yes on Spain at 49¢, $1 amount, Total Return $2.08, Submit Buy, then the confetti "Share your call" card. Side labels read "I predicted Spain · 49%", "$1 in → $2.08 if right" and "Locked in ✓".
+- src: compositions/frames/06-my-call.html
+- scene: Panel cuts through $1 → $1.33, Submit Buy, then the "To win $1" share card. "i made my call."
 
-## Frame 5: Real account, real position (28-33s)
+## Frame 7: Real account, real call (34-37.5s)
 - act: Proof
 - status: built
-- duration: 5s
-- src: compositions/frames/05-proof.html
-- rules: two phones side by side + stamp
-- scene: Positions list (@sammiedfab, Spain vs England, Yes $0.51 → $1) next to the live position page. A "REAL ACCOUNT · REAL CALL" stamp lands.
+- src: compositions/frames/07-proof.html
+- scene: Live Arsenal position panel. @sammiedfab · live position.
 
-## Frame 6: CTA (33-40s)
+## Frame 8: worm × premier league (37.5-40s)
 - act: Close
 - status: built
-- duration: 7s
-- src: compositions/frames/06-cta.html
-- rules: headline + link lockup
-- scene: "YOUR CALL." then "Predict the Premier League on worm →", the link worm.wtf/r/sammiedfab and @wormwtf. The referral page plays dimmed in the background phone.
+- src: compositions/frames/08-lockup.html
+- scene: worm chrome W × "premier league", in the style of worm's partner lockups.
+
+## Frame 9: CTA (40-44s)
+- act: Close
+- status: built
+- src: compositions/frames/09-cta.html
+- scene: White end card: predict the premier league on worm / worm.wtf/r/sammiedfab / @wormwtf

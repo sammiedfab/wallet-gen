@@ -7,7 +7,7 @@ destination: x-feed
 aspect: 1920x1080
 language: en
 audience: Superteam Earn judges and football fans on X
-length: 40s
+length: 44s
 angle: proof-walkthrough
 ---
 
@@ -25,9 +25,17 @@ Tone: sharp, punchy, sports-broadcast energy.
   Submit Buy, "Share your call" confetti card, the live position. The "My call" and "Proof" beats use it.
 - assets/profile-ref.mp4 (from the user's .mp4 at 30–57.5s): @sammiedfab profile, Invite & Earn page with
   worm.wtf/r/sammiedfab, Positions list with Spain vs England. Source 0–30s left out (it shows a Google account picker and a browser menu with names and emails).
-- PENDING: the user's Premier League clip (Premier League tab, then one PL match with its %). The hook and frame 2 use it.
+- assets/pl-arsenal.mp4 (the user's PL clip, 37s): Premier League tab, EPL: 2027 Champion, Arsenal 77%, Yes on Arsenal at 77¢, $1 → $1.33,
+  Submit, the "To win $1" card, the live Arsenal position. The main proof footage.
+- assets/brand/favicon.png: the worm 3D chrome W, from worm.wtf.
+- assets/fonts: Instrument Sans (worm.wtf's own font), DejaVu Sans Mono (terminal), VT323 (CRT/pixel).
+- PENDING: the user will send music and sound effects.
 
 ## Customizations
+
+- Match worm's own X videos (posts 2118395670449000814 and 2120928453092323553): Instrument Sans lowercase with tight tracking,
+  word-by-word builds, typed terminal hook with a blinking cursor, CRT/RGB fringe hits, tilted floating UI panels,
+  monochrome black/gray with app green/red only, worm W × lockup, white "worm.wtf" end card.
 
 - Phone-frame presentation of the recordings with zoom-ins and callouts on the key UI.
 - Burned-in captions/headlines (X autoplays muted).
