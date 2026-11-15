@@ -40,6 +40,7 @@ Tone: sharp, punchy, sports-broadcast energy.
 - Phone-frame presentation of the recordings with zoom-ins and callouts on the key UI.
 - Burned-in captions/headlines (X autoplays muted).
 - CTA shows https://www.worm.wtf/r/sammiedfab and @wormwtf.
+- Persistent @sammiedfab handle in the lower-right corner for the whole video (inverts on the white end card).
 
 ## Notes
 
