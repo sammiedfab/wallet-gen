@@ -33,7 +33,7 @@
     {
       "id": "s04-crypto",
       "path": "assets/voice/s04-crypto.wav",
-      "duration_s": 9.323,
+      "duration_s": 9.173,
       "words": []
     },
     {
@@ -62,5 +62,5 @@
     }
   ],
   "sfx": [],
-  "total_duration_s": 66.945
+  "total_duration_s": 66.795
 }
