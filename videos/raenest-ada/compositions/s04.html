@@ -48,9 +48,12 @@
 .chain .tk + .tk{margin-left:.26em}
 .chain .bx{background:#fff;color:#2E096F}
 .chain .ar{background:#E5FE00;color:#2E096F;padding:6px 18px}
+.gw{position:absolute;inset:0;overflow:hidden}
+.gw i{position:absolute;border-radius:50%;background:var(--c);filter:blur(90px)}
+.gw b{position:absolute;inset:0;background:var(--c)}
 .fn{position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:28px;white-space:nowrap}
 
-#s04-bg{background:#2E096F} #s04-co{background:#FF4F40}
+#s04-bg{background:#2E096F}
 #s04-shot{position:absolute;left:1030px;top:110px;width:700px;height:1034px;border-radius:30px}
 #s04-ch{left:192px !important}
 
@@ -62,7 +65,7 @@
 <div id="s04-clk" class="clk" data-layout-allow-overflow data-layout-ignore style="top:250px;font-size:190px"><span class="dg"><span class="strip"><span>09:03</span><span>12:30</span></span></span></div>
 <div id="s04-l1" class="ln" style="top:470px;font-size:72px;color:#fff;--acc:#E5FE00;"><span class="tk">At</span><span class="tk">lunch,</span><span class="tk">she</span><span class="tk">tops</span><span class="tk">up</span><span class="tk">with</span><span class="tk chip">SOL</span></div>
 <div id="s04-l2" class="ctr" style="top:590px;font-size:60px;color:rgba(255,255,255,.6);--acc:#E5FE00"><span class="tk">from</span><span class="tk">her</span><span class="tk">exchange.</span></div>
-<div id="s04-co" class="bg"></div>
+<div id="s04-co" class="gw" data-layout-ignore style="--c:#FF4F40"><i style="left:1623px;top:715px;width:702px;height:702px"></i><i style="left:1528px;top:308px;width:937px;height:937px"></i><i style="left:1257px;top:816px;width:685px;height:685px"></i><i style="left:1126px;top:359px;width:851px;height:851px"></i><i style="left:1513px;top:-110px;width:922px;height:922px"></i><i style="left:1189px;top:42px;width:771px;height:771px"></i><i style="left:826px;top:707px;width:678px;height:678px"></i><i style="left:720px;top:284px;width:824px;height:824px"></i><i style="left:694px;top:-58px;width:906px;height:906px"></i><i style="left:1406px;top:-430px;width:903px;height:903px"></i><i style="left:360px;top:587px;width:893px;height:893px"></i><i style="left:1177px;top:-423px;width:839px;height:839px"></i><i style="left:390px;top:287px;width:802px;height:802px"></i><i style="left:708px;top:-317px;width:792px;height:792px"></i><i style="left:281px;top:-166px;width:902px;height:902px"></i><i style="left:58px;top:735px;width:819px;height:819px"></i><i style="left:314px;top:-312px;width:733px;height:733px"></i><i style="left:-58px;top:403px;width:782px;height:782px"></i><i style="left:-107px;top:-11px;width:826px;height:826px"></i><i style="left:64px;top:-319px;width:678px;height:678px"></i><i style="left:-420px;top:576px;width:901px;height:901px"></i><i style="left:-281px;top:307px;width:698px;height:698px"></i><i style="left:-420px;top:-25px;width:848px;height:848px"></i><i style="left:-429px;top:-375px;width:764px;height:764px"></i><b></b></div>
 <img id="s04-shot" src="assets/ui/addmoney.png">
 <div id="s04-c1" class="cap" style="top:380px;left:192px;font-size:68px;color:#fff;--acc:#2E096F"><div><span class="tk">Raenest</span><span class="tk">converts</span><span class="tk">it</span></div><div style="color:#2E096F"><span class="tk">to</span><span class="tk">USDC,</span></div></div>
 <div id="s04-c2" class="cap" style="top:380px;left:192px;font-size:68px;color:#fff;--acc:#2E096F"><div><span class="tk">right</span><span class="tk">in</span><span class="tk">her</span></div><div style="color:#2E096F"><span class="tk">USDC</span><span class="tk">wallet.</span></div></div>
@@ -122,6 +125,10 @@ function cursor(sel, pts, clicks){ const c=$(sel); const ox=11, oy=6;
     tl.fromTo(c,{x:p[1]-ox,y:p[2]-oy},{x:q[1]-ox,y:q[2]-oy,duration:Math.max(.3,q[0]-p[0]-.05),ease:'power3.inOut',immediateRender:false},p[0]+.05); }
   (clicks||[]).forEach(t=>{ tl.fromTo(c,{scale:1},{scale:.8,duration:.08,ease:'power2.in',immediateRender:false},t);
     tl.fromTo(c,{scale:.8},{scale:1,duration:.18,ease:'power2.out',immediateRender:false},t+.08); }); }
+// gradient wipe: blurred circles of the next colour pop in from one side, then the full fill settles
+function gwipe(sel, t, d){ d=d||.6; const cs=$$(sel+' i'), n=cs.length;
+  cs.forEach((c,k)=>{ tl.fromTo(c,{opacity:0,scale:.25},{opacity:1,scale:1,duration:.38,ease:'power2.out'},t+k*(d*.7/n)); });
+  tl.fromTo(sel+' b',{opacity:0},{opacity:1,duration:.22,ease:'power2.in'},t+d*.62); }
 function pop(sel, t){ tl.fromTo(sel,{opacity:0,y:40,scale:.94,filter:'blur(8px)'},{opacity:1,y:0,scale:1,filter:'blur(0px)',duration:.6,ease:'expo.out'},t); }
 
 const build = () => {
@@ -130,7 +137,7 @@ roll('#s04-clk',.2);
 grow('#s04-l1',[.3,.46,.93,1.17,1.49,1.64,1.96]);
 words('#s04-l2',[2.2,2.51,2.75]);
 out(['#s04-clk','#s04-l1','#s04-l2'],2.95,.2);
-flood('#s04-co',3.05,1380,600);
+gwipe('#s04-co',3.0,.6);
 inn('#s04-shot',{opacity:0,y:320},{opacity:1,y:0,duration:.85},3.15);
 words('#s04-c1',[3.46,4.16,4.97,5.17,5.37]);
 cursor('#s04-cur',[[3.6,1800,1050],[4.0,1520,895],[5.0,1520,895],[5.4,1830,1070]],[4.05]);

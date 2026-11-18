@@ -48,9 +48,12 @@
 .chain .tk + .tk{margin-left:.26em}
 .chain .bx{background:#fff;color:#2E096F}
 .chain .ar{background:#E5FE00;color:#2E096F;padding:6px 18px}
+.gw{position:absolute;inset:0;overflow:hidden}
+.gw i{position:absolute;border-radius:50%;background:var(--c);filter:blur(90px)}
+.gw b{position:absolute;inset:0;background:var(--c)}
 .fn{position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:28px;white-space:nowrap}
 
-#s05-bg{background:#2E096F} #s05-lt{background:#F4F2FB}
+#s05-bg{background:#2E096F}
 #s05-vault{position:absolute;left:130px;top:200px;width:820px;height:713px;-webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 80%,transparent)}
 #s05-pct{position:absolute;left:1030px;top:330px;font:900 280px Inter,sans-serif;letter-spacing:-.04em;line-height:1;color:#E5FE00;white-space:nowrap}
 #s05-tags{left:1036px !important}
@@ -68,7 +71,7 @@
 <div id="s05-apy" class="cap" style="left:1036px;top:640px;font-size:60px;color:#fff;--acc:#E5FE00"><span class="tk">variable</span><span class="tk">APY</span><span class="tk">on</span></div>
 <div id="s05-tags" class="chain" style="top:740px;font-size:52px"><span class="tk bx">USDC</span><span class="tk bx">USDT</span></div>
 <div id="s05-fn1" class="fn" style="left:1036px;top:880px;color:rgba(255,255,255,.7)">Eligible USDC &amp; USDT balances · APY varies</div>
-<div id="s05-lt" class="bg"></div>
+<div id="s05-lt" class="gw" data-layout-ignore style="--c:#F4F2FB"><i style="left:1554px;top:-390px;width:886px;height:886px"></i><i style="left:1614px;top:-4px;width:744px;height:744px"></i><i style="left:1117px;top:-423px;width:720px;height:720px"></i><i style="left:1070px;top:-167px;width:922px;height:922px"></i><i style="left:1548px;top:337px;width:756px;height:756px"></i><i style="left:733px;top:-363px;width:737px;height:737px"></i><i style="left:828px;top:6px;width:710px;height:710px"></i><i style="left:1085px;top:371px;width:739px;height:739px"></i><i style="left:1564px;top:662px;width:753px;height:753px"></i><i style="left:406px;top:-389px;width:874px;height:874px"></i><i style="left:781px;top:434px;width:672px;height:672px"></i><i style="left:422px;top:-121px;width:830px;height:830px"></i><i style="left:1020px;top:599px;width:874px;height:874px"></i><i style="left:433px;top:356px;width:705px;height:705px"></i><i style="left:818px;top:801px;width:688px;height:688px"></i><i style="left:-43px;top:-53px;width:899px;height:899px"></i><i style="left:-64px;top:-456px;width:772px;height:772px"></i><i style="left:367px;top:745px;width:750px;height:750px"></i><i style="left:59px;top:333px;width:776px;height:776px"></i><i style="left:-319px;top:-62px;width:747px;height:747px"></i><i style="left:-38px;top:733px;width:737px;height:737px"></i><i style="left:-433px;top:-449px;width:771px;height:771px"></i><i style="left:-380px;top:278px;width:907px;height:907px"></i><i style="left:-298px;top:644px;width:776px;height:776px"></i><b></b></div>
 <div id="s05-p" class="panel" style="left:1020px;top:120px;width:642px;height:1140px"><div class="cam" id="s05-cam"><div class="inner"><div class="sbar"><span>9:41</span><span>5G ▮</span></div>
 <div class="lay" id="s05-scr">
   <div style="font-size:22px">←</div>
@@ -141,6 +144,10 @@ function cursor(sel, pts, clicks){ const c=$(sel); const ox=11, oy=6;
     tl.fromTo(c,{x:p[1]-ox,y:p[2]-oy},{x:q[1]-ox,y:q[2]-oy,duration:Math.max(.3,q[0]-p[0]-.05),ease:'power3.inOut',immediateRender:false},p[0]+.05); }
   (clicks||[]).forEach(t=>{ tl.fromTo(c,{scale:1},{scale:.8,duration:.08,ease:'power2.in',immediateRender:false},t);
     tl.fromTo(c,{scale:.8},{scale:1,duration:.18,ease:'power2.out',immediateRender:false},t+.08); }); }
+// gradient wipe: blurred circles of the next colour pop in from one side, then the full fill settles
+function gwipe(sel, t, d){ d=d||.6; const cs=$$(sel+' i'), n=cs.length;
+  cs.forEach((c,k)=>{ tl.fromTo(c,{opacity:0,scale:.25},{opacity:1,scale:1,duration:.38,ease:'power2.out'},t+k*(d*.7/n)); });
+  tl.fromTo(sel+' b',{opacity:0},{opacity:1,duration:.22,ease:'power2.in'},t+d*.62); }
 function pop(sel, t){ tl.fromTo(sel,{opacity:0,y:40,scale:.94,filter:'blur(8px)'},{opacity:1,y:0,scale:1,filter:'blur(0px)',duration:.6,ease:'expo.out'},t); }
 
 const build = () => {
@@ -156,7 +163,7 @@ words('#s05-apy',[4.97,5.62,5.86]);
 $$('#s05-tags .tk').forEach((t,i)=>{ tl.fromTo(t,{opacity:0,x:60,scale:.7},{opacity:1,x:0,scale:1,duration:.5,ease:'back.out(1.6)'},[6.02,7.65][i]); });
 inn('#s05-fn1',{opacity:0},{opacity:1,duration:.4},5.2);
 out(['#s05-vault','#s05-upto','#s05-pct','#s05-apy','#s05-tags','#s05-fn1'],8.05,.2);
-flood('#s05-lt',8.15,960,540);
+gwipe('#s05-lt',8.1,.6);
 inn('#s05-p',{opacity:0,y:300},{opacity:1,y:0,duration:.8},8.3);
 inn('#s05-fn2',{opacity:0},{opacity:1,duration:.4},8.6);
 words('#s05-c1',[8.82,9.22]);

@@ -48,9 +48,12 @@
 .chain .tk + .tk{margin-left:.26em}
 .chain .bx{background:#fff;color:#2E096F}
 .chain .ar{background:#E5FE00;color:#2E096F;padding:6px 18px}
+.gw{position:absolute;inset:0;overflow:hidden}
+.gw i{position:absolute;border-radius:50%;background:var(--c);filter:blur(90px)}
+.gw b{position:absolute;inset:0;background:var(--c)}
 .fn{position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:28px;white-space:nowrap}
 
-#s07-bg{background:#2E096F} #s07-lt{background:#F4F2FB}
+#s07-bg{background:#2E096F}
 #s07-ch{left:192px !important} #s07-wash{opacity:0}
 
 </style>
@@ -59,7 +62,7 @@
 
 <div id="s07-bg" class="bg"></div>
 <div id="s07-day" class="ln" style="top:470px;font-size:84px;color:#fff;--acc:#E5FE00;"><span class="tk chip">Friday.</span></div>
-<div id="s07-lt" class="bg"></div>
+<div id="s07-lt" class="gw" data-layout-ignore style="--c:#F4F2FB"><i style="left:-432px;top:634px;width:795px;height:795px"></i><i style="left:-482px;top:332px;width:915px;height:915px"></i><i style="left:-132px;top:582px;width:902px;height:902px"></i><i style="left:-41px;top:315px;width:855px;height:855px"></i><i style="left:-388px;top:-120px;width:885px;height:885px"></i><i style="left:40px;top:38px;width:754px;height:754px"></i><i style="left:365px;top:563px;width:878px;height:878px"></i><i style="left:489px;top:462px;width:668px;height:668px"></i><i style="left:252px;top:-35px;width:885px;height:885px"></i><i style="left:-345px;top:-346px;width:796px;height:796px"></i><i style="left:608px;top:597px;width:913px;height:913px"></i><i style="left:754px;top:364px;width:745px;height:745px"></i><i style="left:-82px;top:-503px;width:846px;height:846px"></i><i style="left:380px;top:-341px;width:764px;height:764px"></i><i style="left:785px;top:-63px;width:715px;height:715px"></i><i style="left:1175px;top:666px;width:766px;height:766px"></i><i style="left:1099px;top:201px;width:906px;height:906px"></i><i style="left:758px;top:-479px;width:885px;height:885px"></i><i style="left:1097px;top:-137px;width:926px;height:926px"></i><i style="left:1430px;top:550px;width:940px;height:940px"></i><i style="left:1172px;top:-419px;width:811px;height:811px"></i><i style="left:1502px;top:236px;width:846px;height:846px"></i><i style="left:1514px;top:-110px;width:844px;height:844px"></i><i style="left:1545px;top:-457px;width:815px;height:815px"></i><b></b></div>
 <div id="s07-wash" class="wash"></div>
 <div id="s07-p" class="panel" style="left:1020px;top:120px;width:642px;height:1140px"><div class="cam" id="s07-cam"><div class="inner"><div class="sbar"><span>9:41</span><span>5G ▮</span></div>
 <div class="lay" id="s07-A">
@@ -141,13 +144,17 @@ function cursor(sel, pts, clicks){ const c=$(sel); const ox=11, oy=6;
     tl.fromTo(c,{x:p[1]-ox,y:p[2]-oy},{x:q[1]-ox,y:q[2]-oy,duration:Math.max(.3,q[0]-p[0]-.05),ease:'power3.inOut',immediateRender:false},p[0]+.05); }
   (clicks||[]).forEach(t=>{ tl.fromTo(c,{scale:1},{scale:.8,duration:.08,ease:'power2.in',immediateRender:false},t);
     tl.fromTo(c,{scale:.8},{scale:1,duration:.18,ease:'power2.out',immediateRender:false},t+.08); }); }
+// gradient wipe: blurred circles of the next colour pop in from one side, then the full fill settles
+function gwipe(sel, t, d){ d=d||.6; const cs=$$(sel+' i'), n=cs.length;
+  cs.forEach((c,k)=>{ tl.fromTo(c,{opacity:0,scale:.25},{opacity:1,scale:1,duration:.38,ease:'power2.out'},t+k*(d*.7/n)); });
+  tl.fromTo(sel+' b',{opacity:0},{opacity:1,duration:.22,ease:'power2.in'},t+d*.62); }
 function pop(sel, t){ tl.fromTo(sel,{opacity:0,y:40,scale:.94,filter:'blur(8px)'},{opacity:1,y:0,scale:1,filter:'blur(0px)',duration:.6,ease:'expo.out'},t); }
 
 const build = () => {
 
 grow('#s07-day',[0]);
 out('#s07-day',.45,.2);
-flood('#s07-lt',.55,960,540);
+gwipe('#s07-lt',.5,.6);
 inn('#s07-p',{opacity:0,y:300},{opacity:1,y:0,duration:.8},.7);
 words('#s07-c1',[.46,.68,.85,1.12,1.28,1.61,2.11]);
 cursor('#s07-cur',[[1.6,1800,1060],[2.45,1300,762],[3.3,1300,762],[3.8,1320,962],[4.6,1320,962],[5.0,1800,1070]],[2.55,3.95]);

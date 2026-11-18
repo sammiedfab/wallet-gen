@@ -51,3 +51,13 @@ s05 Vault 36.7–47.8 · s06 cards 47.8–57.5 · s07 send 57.5–64.3 · s08 CT
   a big cursor clicks (Solana tab, Copy, Crypto tab, Withdraw, Pay from, Stablecoin, Send);
   notification cards pop over a violet wash (USDT received, Add money successful, Interest earned, Paid, Sent).
 - Colours stay Raenest's (indigo text beats, light UI beats, lime/violet accents) in place of the reel's black/white/green.
+
+## Gradient wipe transitions (after the "gradient wipe" tutorial reel) — not yet rendered
+- Built like the tutorial: ~24 circles of the next colour, blurred 90 px, pop in one after another from one
+  side (scale 0.25→1, opacity 0→1, staggered over ~0.4 s); the full colour settles underneath at the end.
+- Used on 7 seams: s02→s03 (indigo→light, from left), inside s03 "Fast. Low cost." (light→indigo, from right),
+  s04 lunch → Add money (indigo→coral, from bottom-right), s05 Vault → Paid daily (indigo→light, from top-right),
+  s06 card tap → virtual card (night→light, from top-right), s07 Friday → Send (indigo→light, from bottom-left),
+  s07→s08 (light→indigo, from top-left).
+- Kept for variety: circle reveal into the coins plate (s03) and into "No converting first." (s06), hard cuts
+  elsewhere, and the white-flash logo sting.

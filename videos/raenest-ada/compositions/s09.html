@@ -48,6 +48,9 @@
 .chain .tk + .tk{margin-left:.26em}
 .chain .bx{background:#fff;color:#2E096F}
 .chain .ar{background:#E5FE00;color:#2E096F;padding:6px 18px}
+.gw{position:absolute;inset:0;overflow:hidden}
+.gw i{position:absolute;border-radius:50%;background:var(--c);filter:blur(90px)}
+.gw b{position:absolute;inset:0;background:var(--c)}
 .fn{position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:28px;white-space:nowrap}
 
 
@@ -119,6 +122,10 @@ function cursor(sel, pts, clicks){ const c=$(sel); const ox=11, oy=6;
     tl.fromTo(c,{x:p[1]-ox,y:p[2]-oy},{x:q[1]-ox,y:q[2]-oy,duration:Math.max(.3,q[0]-p[0]-.05),ease:'power3.inOut',immediateRender:false},p[0]+.05); }
   (clicks||[]).forEach(t=>{ tl.fromTo(c,{scale:1},{scale:.8,duration:.08,ease:'power2.in',immediateRender:false},t);
     tl.fromTo(c,{scale:.8},{scale:1,duration:.18,ease:'power2.out',immediateRender:false},t+.08); }); }
+// gradient wipe: blurred circles of the next colour pop in from one side, then the full fill settles
+function gwipe(sel, t, d){ d=d||.6; const cs=$$(sel+' i'), n=cs.length;
+  cs.forEach((c,k)=>{ tl.fromTo(c,{opacity:0,scale:.25},{opacity:1,scale:1,duration:.38,ease:'power2.out'},t+k*(d*.7/n)); });
+  tl.fromTo(sel+' b',{opacity:0},{opacity:1,duration:.22,ease:'power2.in'},t+d*.62); }
 function pop(sel, t){ tl.fromTo(sel,{opacity:0,y:40,scale:.94,filter:'blur(8px)'},{opacity:1,y:0,scale:1,filter:'blur(0px)',duration:.6,ease:'expo.out'},t); }
 
 const build = () => {

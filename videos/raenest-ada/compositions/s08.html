@@ -48,9 +48,12 @@
 .chain .tk + .tk{margin-left:.26em}
 .chain .bx{background:#fff;color:#2E096F}
 .chain .ar{background:#E5FE00;color:#2E096F;padding:6px 18px}
+.gw{position:absolute;inset:0;overflow:hidden}
+.gw i{position:absolute;border-radius:50%;background:var(--c);filter:blur(90px)}
+.gw b{position:absolute;inset:0;background:var(--c)}
 .fn{position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:28px;white-space:nowrap}
 
-#s08-bg{background:#2E096F}
+#s08-bg{background:#F4F2FB}
 #s08-lock{position:absolute;left:470px;top:400px;width:980px;height:150px}
 #s08-mark{position:absolute;left:0;top:10px;width:130px;height:130px}
 #s08-word{position:absolute;left:160px;top:30px;width:420px;height:90px}
@@ -64,6 +67,7 @@
 <div id="s08-st" class="st clip" data-start="0" data-duration="9.93" data-layout-allow-overflow>
 
 <div id="s08-bg" class="bg"></div>
+<div id="s08-gw" class="gw" data-layout-ignore style="--c:#2E096F"><i style="left:-453px;top:-477px;width:842px;height:842px"></i><i style="left:-74px;top:-375px;width:762px;height:762px"></i><i style="left:-453px;top:-123px;width:933px;height:933px"></i><i style="left:-68px;top:47px;width:741px;height:741px"></i><i style="left:353px;top:-334px;width:670px;height:670px"></i><i style="left:-342px;top:334px;width:748px;height:748px"></i><i style="left:331px;top:-74px;width:746px;height:746px"></i><i style="left:27px;top:341px;width:744px;height:744px"></i><i style="left:-398px;top:743px;width:671px;height:671px"></i><i style="left:457px;top:388px;width:728px;height:728px"></i><i style="left:797px;top:-412px;width:685px;height:685px"></i><i style="left:4px;top:712px;width:820px;height:820px"></i><i style="left:797px;top:-103px;width:823px;height:823px"></i><i style="left:408px;top:623px;width:855px;height:855px"></i><i style="left:713px;top:272px;width:905px;height:905px"></i><i style="left:1175px;top:-295px;width:695px;height:695px"></i><i style="left:1154px;top:-67px;width:813px;height:813px"></i><i style="left:775px;top:699px;width:788px;height:788px"></i><i style="left:1110px;top:219px;width:934px;height:934px"></i><i style="left:1482px;top:-69px;width:718px;height:718px"></i><i style="left:1408px;top:-442px;width:925px;height:925px"></i><i style="left:1201px;top:755px;width:793px;height:793px"></i><i style="left:1415px;top:271px;width:872px;height:872px"></i><i style="left:1521px;top:581px;width:856px;height:856px"></i><b></b></div>
 <div id="s08-ch" class="chain" style="top:470px;font-size:68px"><span class="tk bx">Get paid</span><span class="tk ar">→</span><span class="tk bx">Save</span><span class="tk ar">→</span><span class="tk bx">Spend</span><span class="tk ar">→</span><span class="tk bx">Send</span></div>
 <div id="s08-lock"><img id="s08-mark" src="assets/brand/raenest-mark.svg"><img id="s08-word" src="assets/brand/raenest-wordmark.svg"><div id="s08-sweep">All in<br>one app.</div></div>
 <div id="s08-l1" class="ln" style="top:520px;font-size:72px;color:#fff;--acc:#E5FE00;"><span class="tk">Sign</span><span class="tk">up</span><span class="tk">with</span><span class="tk chip">my link</span></div>
@@ -121,10 +125,15 @@ function cursor(sel, pts, clicks){ const c=$(sel); const ox=11, oy=6;
     tl.fromTo(c,{x:p[1]-ox,y:p[2]-oy},{x:q[1]-ox,y:q[2]-oy,duration:Math.max(.3,q[0]-p[0]-.05),ease:'power3.inOut',immediateRender:false},p[0]+.05); }
   (clicks||[]).forEach(t=>{ tl.fromTo(c,{scale:1},{scale:.8,duration:.08,ease:'power2.in',immediateRender:false},t);
     tl.fromTo(c,{scale:.8},{scale:1,duration:.18,ease:'power2.out',immediateRender:false},t+.08); }); }
+// gradient wipe: blurred circles of the next colour pop in from one side, then the full fill settles
+function gwipe(sel, t, d){ d=d||.6; const cs=$$(sel+' i'), n=cs.length;
+  cs.forEach((c,k)=>{ tl.fromTo(c,{opacity:0,scale:.25},{opacity:1,scale:1,duration:.38,ease:'power2.out'},t+k*(d*.7/n)); });
+  tl.fromTo(sel+' b',{opacity:0},{opacity:1,duration:.22,ease:'power2.in'},t+d*.62); }
 function pop(sel, t){ tl.fromTo(sel,{opacity:0,y:40,scale:.94,filter:'blur(8px)'},{opacity:1,y:0,scale:1,filter:'blur(0px)',duration:.6,ease:'expo.out'},t); }
 
 const build = () => {
 
+gwipe('#s08-gw',0,.5);
 grow('#s08-ch',[.3,.85,1.05,1.35,1.51,1.85,2.07]);
 tl.fromTo('#s08-ch',{opacity:1,filter:'blur(0px)'},{opacity:0,filter:'blur(14px)',duration:.3,ease:'power2.in',immediateRender:false},2.45);
 tl.fromTo('#s08-mark',{opacity:0,scale:.4},{opacity:1,scale:1,duration:.5,ease:'back.out(1.6)'},2.54);
