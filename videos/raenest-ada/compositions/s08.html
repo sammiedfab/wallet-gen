@@ -76,7 +76,6 @@
 <div id="s08-lock"><img id="s08-mark" src="assets/brand/raenest-mark.svg"><img id="s08-word" src="assets/brand/raenest-wordmark.svg"><div id="s08-sweep">All in<br>one app.</div></div>
 <div id="s08-l1" class="ln" style="top:520px;font-size:72px;color:#fff;--acc:#E5FE00;"><span class="tk">Sign</span><span class="tk">up</span><span class="tk">with</span><span class="tk chip">my link</span></div>
 <div id="s08-card" data-hold="true"><div class="u">referral.raenest.com/WzbV/i?referral_code=sammiedfab</div><div class="c">Referral code: sammiedfab</div></div>
-<div id="s08-l2" class="ctr" style="top:900px;font-size:56px;color:#fff;--acc:#E5FE00"><span class="tk">Make</span><span class="tk">your</span><span class="tk" style="color:var(--acc)">first</span><span class="tk" style="color:var(--acc)">transaction</span><span class="tk">today.</span></div>
 
 </div>
 </div>
@@ -145,13 +144,15 @@ gwipe('#s08-gw',0,.5);
 tl.fromTo('#s08-m',{opacity:0},{opacity:1,duration:.5,ease:'power2.out'},.45);
 grow('#s08-ch',[.3,.85,1.05,1.35,1.51,1.85,2.07]);
 tl.fromTo('#s08-ch',{opacity:1,filter:'blur(0px)'},{opacity:0,filter:'blur(14px)',duration:.3,ease:'power2.in',immediateRender:false},2.45);
-tl.fromTo('#s08-mark',{opacity:0,scale:.4},{opacity:1,scale:1,duration:.5,ease:'back.out(1.6)'},2.54);
+tl.fromTo('#s08-mark',{opacity:0,scale:.4,filter:'blur(14px)'},{opacity:1,scale:1,filter:'blur(0px)',duration:.6,ease:'expo.out'},2.54);
+tl.fromTo('#s08-mark',{rotation:-70},{rotation:250,duration:7.39,ease:'sine.inOut'},2.54);
+tl.fromTo('#s08-mark',{rotationY:0,transformPerspective:900},{rotationY:28,transformPerspective:900,duration:3.7,ease:'sine.inOut'},2.54);
+tl.fromTo('#s08-mark',{rotationY:28,transformPerspective:900},{rotationY:0,transformPerspective:900,duration:3.69,ease:'sine.inOut',immediateRender:false},6.24);
 tl.fromTo('#s08-word',{opacity:0,x:-40,filter:'blur(10px)'},{opacity:1,x:0,filter:'blur(0px)',duration:.5,ease:'expo.out'},2.7);
 tl.fromTo('#s08-sweep',{opacity:0,scaleX:0},{opacity:1,scaleX:1,duration:.5,ease:'expo.out'},2.95);
 tl.fromTo('#s08-lock',{y:0,scale:1},{y:-300,scale:.7,duration:.6,ease:'power3.inOut'},3.45);
 grow('#s08-l1',[3.66,3.91,4.04,4.29]);
 pop('#s08-card',4.5);
-words('#s08-l2',[5.36,5.6,5.85,6.15,6.82]);
 
 window.__timelines["s08"] = tl;
 };
