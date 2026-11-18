@@ -55,7 +55,8 @@ s05 Vault 36.7–47.8 · s06 cards 47.8–57.5 · s07 send 57.5–64.3 · s08 CT
 ## Gradient wipe transitions (after the "gradient wipe" tutorial reel) — not yet rendered
 - Built like the tutorial: ~24 circles of the next colour, blurred 90 px, pop in one after another from one
   side (scale 0.25→1, opacity 0→1, staggered over ~0.4 s); the full colour settles underneath at the end.
-- Used on 7 seams: s02→s03 (indigo→light, from left), inside s03 "Fast. Low cost." (light→indigo, from right),
+- Now used on 3 seams only (user's choice): s02→s03 (0:12.8), s04 lunch → Add money (0:29.9), s07→s08 (1:04.3).
+  Originally tried on 7 seams: s02→s03 (indigo→light, from left), inside s03 "Fast. Low cost." (light→indigo, from right),
   s04 lunch → Add money (indigo→coral, from bottom-right), s05 Vault → Paid daily (indigo→light, from top-right),
   s06 card tap → virtual card (night→light, from top-right), s07 Friday → Send (indigo→light, from bottom-left),
   s07→s08 (light→indigo, from top-left).
