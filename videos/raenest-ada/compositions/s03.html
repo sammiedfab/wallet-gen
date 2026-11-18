@@ -194,6 +194,11 @@ grow('#s03-l2',[8.02,8.68,9.06,9.25,9.34]);
 out('#s03-l2',9.8,.2);
 flood('#s03-vi',9.9,960,540);
 inn('#s03-coins',{opacity:0,x:200,filter:'blur(16px)'},{opacity:1,x:0,filter:'blur(0px)',duration:1.0},10.0);
+// coins float in 3D for the rest of the scene: bob, sway and a slow tilt (finite, seek-safe tweens)
+tl.fromTo('#s03-coins',{y:18},{y:-26,duration:2.05,ease:'sine.inOut'},10.0);
+tl.fromTo('#s03-coins',{y:-26},{y:10,duration:2.08,ease:'sine.inOut',immediateRender:false},12.05);
+tl.fromTo('#s03-coins',{rotationY:-16,rotationX:9,rotation:-4,transformPerspective:1100},{rotationY:13,rotationX:-7,rotation:3,transformPerspective:1100,duration:4.13,ease:'sine.inOut'},10.0);
+tl.fromTo('#s03-coins',{scale:.96},{scale:1.03,duration:4.13,ease:'sine.inOut'},10.0);
 words('#s03-c4',[10.38,10.76,11.06,11.43,11.66]);
 $$('#s03-eq .tk').forEach((t,i)=>{ tl.fromTo(t,{opacity:0,x:60,scale:.7},{opacity:1,x:0,scale:1,duration:.5,ease:'back.out(1.6)'},[12.11,12.5,13.45][i]); });
 
