@@ -67,7 +67,6 @@
 <div id="s06-st" class="st clip" data-start="0" data-duration="9.72" data-layout-allow-overflow>
 
 <div id="s06-bg" class="mesh bg" data-d="9.72" data-layout-ignore style="background:#0B0222;"><svg viewBox="0 0 1920 1080" preserveAspectRatio="none" style="transform:scale(-1,-1);"><path d="M -200 1300 L -200 481 C -104 481 -104 515 -7 515 C 90 515 90 517 186 517 C 282 517 282 487 379 487 C 476 487 476 436 572 436 C 668 436 668 382 765 382 C 862 382 862 347 958 347 C 1054 347 1054 342 1151 342 C 1248 342 1248 370 1344 370 C 1440 370 1440 421 1537 421 C 1634 421 1634 474 1730 474 C 1826 474 1826 512 1923 512 C 2020 512 2020 518 2116 518 L 2120 1300 Z" fill="#1A0645"/><path d="M -200 1300 L -200 760 C -104 760 -104 742 -7 742 C 90 742 90 687 186 687 C 282 687 282 614 379 614 C 476 614 476 551 572 551 C 668 551 668 521 765 521 C 862 521 862 535 958 535 C 1054 535 1054 589 1151 589 C 1248 589 1248 661 1344 661 C 1440 661 1440 726 1537 726 C 1634 726 1634 759 1730 759 C 1826 759 1826 747 1923 747 C 2020 747 2020 696 2116 696 L 2120 1300 Z" fill="#3A1C9C"/><path d="M -200 1300 L -200 951 C -104 951 -104 868 -7 868 C 90 868 90 778 186 778 C 282 778 282 715 379 715 C 476 715 476 702 572 702 C 668 702 668 744 765 744 C 862 744 862 826 958 826 C 1054 826 1054 916 1151 916 C 1248 916 1248 982 1344 982 C 1440 982 1440 999 1537 999 C 1634 999 1634 960 1730 960 C 1826 960 1826 881 1923 881 C 2020 881 2020 789 2116 789 L 2120 1300 Z" fill="#6B52D9"/></svg><div class="grain"></div></div>
-<div id="s06-clk" class="clk" data-layout-allow-overflow data-layout-ignore style="top:250px;font-size:190px"><span class="dg"><span class="strip"><span>18:00</span><span>21:15</span></span></span></div>
 <div id="s06-l1" class="ln" style="top:470px;font-size:72px;color:#fff;--acc:#E5FE00;"><span class="tk">Dinner</span><span class="tk">is</span><span class="tk">on</span><span class="tk">her</span><span class="tk chip">Raenest Visa card.</span></div>
 <img id="s06-hand" src="assets/photo/hand_card.png">
 <div id="s06-c1" class="cap" style="top:400px;left:192px;font-size:68px;color:#fff;--acc:#E5FE00"><div><span class="tk">Tap</span><span class="tk">the</span></div><div style="color:#E5FE00"><span class="tk">physical</span><span class="tk">card.</span></div></div>
@@ -152,9 +151,8 @@ function pop(sel, t){ tl.fromTo(sel,{opacity:0,y:40,scale:.94,filter:'blur(8px)'
 const build = () => {
 meshes();
 
-roll('#s06-clk',.2);
 grow('#s06-l1',[.3,.79,.95,1.11,1.36]);
-out(['#s06-clk','#s06-l1'],2.35,.25);
+out('#s06-l1',2.35,.25);
 inn('#s06-hand',{opacity:0,y:420},{opacity:1,y:0,duration:.75},2.45);
 words('#s06-c1',[2.66,2.88,3.11,3.7]);
 tl.fromTo('#s06-hand',{rotation:0,x:0},{rotation:-6,x:-40,duration:.25,ease:'power2.in',immediateRender:false},3.3);
