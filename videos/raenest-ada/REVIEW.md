@@ -62,3 +62,12 @@ s05 Vault 36.7–47.8 · s06 cards 47.8–57.5 · s07 send 57.5–64.3 · s08 CT
   s07→s08 (light→indigo, from top-left).
 - Kept for variety: circle reveal into the coins plate (s03) and into "No converting first." (s06), hard cuts
   elsewhere, and the white-flash logo sting.
+
+## Gradient-flow backgrounds (after the "gradient flow" tutorial reel) — not yet rendered
+- Built like the tutorial: three wavy shapes stacked from dark to light, blurred 95 px, 7% grain, each wave
+  drifting slowly for the whole scene (seek-safe sine tween, no loops).
+- Palettes: indigo (#12032F → #2E096F → #4D3DD3 → #7B67E6) for text beats in s01–s08, night for the 21:15
+  card tap, violet behind the coins (coin plate edges masked into it), coral (#B01A12 → #FF4F40 → #FF9C82)
+  for the Add money scene (fades in after the gradient wipe lands). Some meshes are flipped so the glow comes
+  from the top for variety.
+- Kept flat on purpose: the light app-screen scenes (UI readability) and the logo sting (matches Raenest's reel).

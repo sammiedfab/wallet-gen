@@ -48,6 +48,9 @@
 .chain .tk + .tk{margin-left:.26em}
 .chain .bx{background:#fff;color:#2E096F}
 .chain .ar{background:#E5FE00;color:#2E096F;padding:6px 18px}
+.mesh{position:absolute;inset:0;overflow:hidden}
+.mesh svg{position:absolute;left:-10%;top:-10%;width:120%;height:120%;filter:blur(95px)}
+.mesh .grain{position:absolute;inset:0;background:url(assets/brand/grain.png) repeat;background-size:384px 384px;opacity:.07;mix-blend-mode:overlay}
 .gw{position:absolute;inset:0;overflow:hidden}
 .gw i{position:absolute;border-radius:50%;background:var(--c);filter:blur(90px)}
 .gw b{position:absolute;inset:0;background:var(--c)}
@@ -55,14 +58,14 @@
 
 #s03-bg{background:#2E096F} #s03-vi{background:#4D3DD3}
 #s03-wash{opacity:0}
-#s03-coins{position:absolute;left:860px;top:70px;width:960px;height:718px}
+#s03-coins{position:absolute;left:860px;top:70px;width:960px;height:718px;-webkit-mask-image:radial-gradient(ellipse at center,#000 60%,transparent 73%);mask-image:radial-gradient(ellipse at center,#000 60%,transparent 73%)}
 #s03-toast{position:absolute;left:1300px;top:735px;padding:12px 22px;border-radius:14px;background:#1B1B1F;color:#fff;font:700 30px Inter,sans-serif;z-index:20}
 #s03-eq{left:192px !important}
 </style>
 <div id="root" data-composition-id="s03" data-width="1920" data-height="1080">
 <div id="s03-st" class="st clip" data-start="0" data-duration="14.13" data-layout-allow-overflow>
 
-<div id="s03-bg" class="bg"></div>
+<div id="s03-bg" class="mesh bg" data-d="14.13" data-layout-ignore style="background:#12032F;"><svg viewBox="0 0 1920 1080" preserveAspectRatio="none" style=""><path d="M -200 1300 L -200 430 C -104 430 -104 482 -7 482 C 90 482 90 515 186 515 C 282 515 282 516 379 516 C 476 516 476 485 572 485 C 668 485 668 434 765 434 C 862 434 862 381 958 381 C 1054 381 1054 346 1151 346 C 1248 346 1248 343 1344 343 C 1440 343 1440 372 1537 372 C 1634 372 1634 423 1730 423 C 1826 423 1826 476 1923 476 C 2020 476 2020 512 2116 512 L 2120 1300 Z" fill="#2E096F"/><path d="M -200 1300 L -200 734 C -104 734 -104 760 -7 760 C 90 760 90 741 186 741 C 282 741 282 685 379 685 C 476 685 476 612 572 612 C 668 612 668 549 765 549 C 862 549 862 521 958 521 C 1054 521 1054 536 1151 536 C 1248 536 1248 591 1344 591 C 1440 591 1440 663 1537 663 C 1634 663 1634 727 1730 727 C 1826 727 1826 759 1923 759 C 2020 759 2020 746 2116 746 L 2120 1300 Z" fill="#4D3DD3"/><path d="M -200 1300 L -200 996 C -104 996 -104 949 -7 949 C 90 949 90 865 186 865 C 282 865 282 776 379 776 C 476 776 476 714 572 714 C 668 714 668 703 765 703 C 862 703 862 746 958 746 C 1054 746 1054 829 1151 829 C 1248 829 1248 919 1344 919 C 1440 919 1440 983 1537 983 C 1634 983 1634 998 1730 998 C 1826 998 1826 958 1923 958 C 2020 958 2020 878 2116 878 L 2120 1300 Z" fill="#7B67E6"/></svg><div class="grain"></div></div>
 <div id="s03-lt" class="gw" data-layout-ignore style="--c:#F4F2FB"><i style="left:-359px;top:309px;width:840px;height:840px"></i><i style="left:-261px;top:-49px;width:667px;height:667px"></i><i style="left:8px;top:47px;width:767px;height:767px"></i><i style="left:-123px;top:348px;width:901px;height:901px"></i><i style="left:-503px;top:-381px;width:874px;height:874px"></i><i style="left:-334px;top:759px;width:670px;height:670px"></i><i style="left:-53px;top:-394px;width:786px;height:786px"></i><i style="left:-50px;top:740px;width:776px;height:776px"></i><i style="left:269px;top:262px;width:862px;height:862px"></i><i style="left:383px;top:13px;width:668px;height:668px"></i><i style="left:281px;top:659px;width:857px;height:857px"></i><i style="left:452px;top:-297px;width:686px;height:686px"></i><i style="left:702px;top:-49px;width:799px;height:799px"></i><i style="left:677px;top:-337px;width:781px;height:781px"></i><i style="left:801px;top:401px;width:778px;height:778px"></i><i style="left:792px;top:668px;width:783px;height:783px"></i><i style="left:1127px;top:-44px;width:721px;height:721px"></i><i style="left:1223px;top:375px;width:745px;height:745px"></i><i style="left:1135px;top:722px;width:806px;height:806px"></i><i style="left:1191px;top:-472px;width:785px;height:785px"></i><i style="left:1580px;top:-7px;width:666px;height:666px"></i><i style="left:1487px;top:333px;width:897px;height:897px"></i><i style="left:1567px;top:744px;width:668px;height:668px"></i><i style="left:1498px;top:-506px;width:925px;height:925px"></i><b></b></div>
 <div id="s03-wash" class="wash"></div>
 <div id="s03-p" class="panel" style="left:1020px;top:120px;width:642px;height:1140px"><div class="cam" id="s03-cam"><div class="inner"><div class="sbar"><span>9:41</span><span>5G ▮</span></div>
@@ -91,10 +94,10 @@
 <div id="s03-c3" class="cap" style="top:400px;left:192px;font-size:68px;color:#1B1B1F;--acc:#4F3BD7"><div><span class="tk">Her</span><span class="tk">client</span><span class="tk">sends</span></div><div style="color:#4F3BD7"><span class="tk">on</span><span class="tk">Solana.</span></div></div>
 <div id="s03-n" class="notif" data-layout-allow-occlusion data-layout-allow-overlap style="left:980px;top:150px"><div class="ni"><img src="assets/brand/raenest-mark.svg"></div><div class="nt"><div class="nh">USDT received<span>now</span></div><div class="nb">+500.00 USDT · Solana network</div></div></div>
 <svg class="cur" id="s03-cur" viewBox="0 0 24 24"><path d="M4 2 L4 19.5 L8.6 15.2 L11.6 22 L14.8 20.6 L11.8 14 L18.2 14 Z" fill="#111" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
-<div id="s03-ind2" class="bg" style="background:#2E096F"></div>
+<div id="s03-ind2" class="mesh bg" data-d="14.13" data-layout-ignore style="background:#12032F;"><svg viewBox="0 0 1920 1080" preserveAspectRatio="none" style=""><path d="M -200 1300 L -200 430 C -104 430 -104 482 -7 482 C 90 482 90 515 186 515 C 282 515 282 516 379 516 C 476 516 476 485 572 485 C 668 485 668 434 765 434 C 862 434 862 381 958 381 C 1054 381 1054 346 1151 346 C 1248 346 1248 343 1344 343 C 1440 343 1440 372 1537 372 C 1634 372 1634 423 1730 423 C 1826 423 1826 476 1923 476 C 2020 476 2020 512 2116 512 L 2120 1300 Z" fill="#2E096F"/><path d="M -200 1300 L -200 734 C -104 734 -104 760 -7 760 C 90 760 90 741 186 741 C 282 741 282 685 379 685 C 476 685 476 612 572 612 C 668 612 668 549 765 549 C 862 549 862 521 958 521 C 1054 521 1054 536 1151 536 C 1248 536 1248 591 1344 591 C 1440 591 1440 663 1537 663 C 1634 663 1634 727 1730 727 C 1826 727 1826 759 1923 759 C 2020 759 2020 746 2116 746 L 2120 1300 Z" fill="#4D3DD3"/><path d="M -200 1300 L -200 996 C -104 996 -104 949 -7 949 C 90 949 90 865 186 865 C 282 865 282 776 379 776 C 476 776 476 714 572 714 C 668 714 668 703 765 703 C 862 703 862 746 958 746 C 1054 746 1054 829 1151 829 C 1248 829 1248 919 1344 919 C 1440 919 1440 983 1537 983 C 1634 983 1634 998 1730 998 C 1826 998 1826 958 1923 958 C 2020 958 2020 878 2116 878 L 2120 1300 Z" fill="#7B67E6"/></svg><div class="grain"></div></div>
 <div id="s03-l1" class="ln" style="top:470px;font-size:84px;color:#fff;--acc:#E5FE00;"><span class="tk">Fast.</span><span class="tk chip">Low cost.</span></div>
 <div id="s03-l2" class="ln" style="top:470px;font-size:72px;color:#fff;--acc:#E5FE00;"><span class="tk">Because</span><span class="tk">USDT</span><span class="tk">is</span><span class="tk">a</span><span class="tk" style="color:var(--acc)">stablecoin,</span></div>
-<div id="s03-vi" class="bg"></div>
+<div id="s03-vi" class="mesh bg" data-d="14.13" data-layout-ignore style="background:#2A1A93;"><svg viewBox="0 0 1920 1080" preserveAspectRatio="none" style=""><path d="M -200 1300 L -200 430 C -104 430 -104 482 -7 482 C 90 482 90 515 186 515 C 282 515 282 516 379 516 C 476 516 476 485 572 485 C 668 485 668 434 765 434 C 862 434 862 381 958 381 C 1054 381 1054 346 1151 346 C 1248 346 1248 343 1344 343 C 1440 343 1440 372 1537 372 C 1634 372 1634 423 1730 423 C 1826 423 1826 476 1923 476 C 2020 476 2020 512 2116 512 L 2120 1300 Z" fill="#3B2BBE"/><path d="M -200 1300 L -200 734 C -104 734 -104 760 -7 760 C 90 760 90 741 186 741 C 282 741 282 685 379 685 C 476 685 476 612 572 612 C 668 612 668 549 765 549 C 862 549 862 521 958 521 C 1054 521 1054 536 1151 536 C 1248 536 1248 591 1344 591 C 1440 591 1440 663 1537 663 C 1634 663 1634 727 1730 727 C 1826 727 1826 759 1923 759 C 2020 759 2020 746 2116 746 L 2120 1300 Z" fill="#4D3DD3"/><path d="M -200 1300 L -200 996 C -104 996 -104 949 -7 949 C 90 949 90 865 186 865 C 282 865 282 776 379 776 C 476 776 476 714 572 714 C 668 714 668 703 765 703 C 862 703 862 746 958 746 C 1054 746 1054 829 1151 829 C 1248 829 1248 919 1344 919 C 1440 919 1440 983 1537 983 C 1634 983 1634 998 1730 998 C 1826 998 1826 958 1923 958 C 2020 958 2020 878 2116 878 L 2120 1300 Z" fill="#8F82EC"/></svg><div class="grain"></div></div>
 <img id="s03-coins" src="assets/brand/coins_on_violet.png">
 <div id="s03-c4" class="cap" style="top:330px;left:192px;font-size:68px;color:#fff;--acc:#E5FE00"><div><span class="tk">Every</span><span class="tk">coin</span><span class="tk">holds</span></div><div style="color:#E5FE00"><span class="tk">its</span><span class="tk">value:</span></div></div>
 <div id="s03-eq" class="chain" style="top:560px;font-size:64px"><span class="tk bx">1 USDT</span><span class="tk bx">≈</span><span class="tk bx">$1.00</span></div>
@@ -154,9 +157,13 @@ function cursor(sel, pts, clicks){ const c=$(sel); const ox=11, oy=6;
 function gwipe(sel, t, d){ d=d||.6; const cs=$$(sel+' i'), n=cs.length;
   cs.forEach((c,k)=>{ tl.fromTo(c,{opacity:0,scale:.25},{opacity:1,scale:1,duration:.38,ease:'power2.out'},t+k*(d*.7/n)); });
   tl.fromTo(sel+' b',{opacity:0},{opacity:1,duration:.22,ease:'power2.in'},t+d*.62); }
+// gradient flow: the blurred wave layers drift slowly for the whole scene
+function meshes(){ $$('.mesh').forEach(m=>{ const d=+m.dataset.d; Array.from(m.querySelectorAll('path')).forEach((q,i)=>{ const sx=(i%2?1:-1)*(60+i*25);
+  tl.fromTo(q,{x:-sx,y:(i-1)*-18},{x:sx,y:(i-1)*18,duration:d,ease:'sine.inOut'},0); }); }); }
 function pop(sel, t){ tl.fromTo(sel,{opacity:0,y:40,scale:.94,filter:'blur(8px)'},{opacity:1,y:0,scale:1,filter:'blur(0px)',duration:.6,ease:'expo.out'},t); }
 
 const build = () => {
+meshes();
 
 gwipe('#s03-lt',0,.6);
 inn('#s03-p',{opacity:0,y:300},{opacity:1,y:0,duration:.9},.25);

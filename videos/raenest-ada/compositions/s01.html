@@ -48,6 +48,9 @@
 .chain .tk + .tk{margin-left:.26em}
 .chain .bx{background:#fff;color:#2E096F}
 .chain .ar{background:#E5FE00;color:#2E096F;padding:6px 18px}
+.mesh{position:absolute;inset:0;overflow:hidden}
+.mesh svg{position:absolute;left:-10%;top:-10%;width:120%;height:120%;filter:blur(95px)}
+.mesh .grain{position:absolute;inset:0;background:url(assets/brand/grain.png) repeat;background-size:384px 384px;opacity:.07;mix-blend-mode:overlay}
 .gw{position:absolute;inset:0;overflow:hidden}
 .gw i{position:absolute;border-radius:50%;background:var(--c);filter:blur(90px)}
 .gw b{position:absolute;inset:0;background:var(--c)}
@@ -58,7 +61,7 @@
 <div id="root" data-composition-id="s01" data-width="1920" data-height="1080">
 <div id="s01-st" class="st clip" data-start="0" data-duration="5.04" data-layout-allow-overflow>
 
-<div id="s01-bg" class="bg"></div>
+<div id="s01-bg" class="mesh bg" data-d="5.04" data-layout-ignore style="background:#12032F;"><svg viewBox="0 0 1920 1080" preserveAspectRatio="none" style=""><path d="M -200 1300 L -200 430 C -104 430 -104 482 -7 482 C 90 482 90 515 186 515 C 282 515 282 516 379 516 C 476 516 476 485 572 485 C 668 485 668 434 765 434 C 862 434 862 381 958 381 C 1054 381 1054 346 1151 346 C 1248 346 1248 343 1344 343 C 1440 343 1440 372 1537 372 C 1634 372 1634 423 1730 423 C 1826 423 1826 476 1923 476 C 2020 476 2020 512 2116 512 L 2120 1300 Z" fill="#2E096F"/><path d="M -200 1300 L -200 734 C -104 734 -104 760 -7 760 C 90 760 90 741 186 741 C 282 741 282 685 379 685 C 476 685 476 612 572 612 C 668 612 668 549 765 549 C 862 549 862 521 958 521 C 1054 521 1054 536 1151 536 C 1248 536 1248 591 1344 591 C 1440 591 1440 663 1537 663 C 1634 663 1634 727 1730 727 C 1826 727 1826 759 1923 759 C 2020 759 2020 746 2116 746 L 2120 1300 Z" fill="#4D3DD3"/><path d="M -200 1300 L -200 996 C -104 996 -104 949 -7 949 C 90 949 90 865 186 865 C 282 865 282 776 379 776 C 476 776 476 714 572 714 C 668 714 668 703 765 703 C 862 703 862 746 958 746 C 1054 746 1054 829 1151 829 C 1248 829 1248 919 1344 919 C 1440 919 1440 983 1537 983 C 1634 983 1634 998 1730 998 C 1826 998 1826 958 1923 958 C 2020 958 2020 878 2116 878 L 2120 1300 Z" fill="#7B67E6"/></svg><div class="grain"></div></div>
 <div id="s01-clk" class="clk" data-layout-allow-overflow data-layout-ignore style="top:300px;font-size:230px"><span class="dg"><span class="strip"><span>09:02</span><span>09:03</span></span></span></div>
 <div id="s01-city" class="ctr" style="top:560px;font-size:60px;color:#fff;--acc:#E5FE00"><span class="tk">in</span><span class="tk" style="color:var(--acc)">Lagos.</span></div>
 <div id="s01-l1" class="ln" style="top:300px;font-size:72px;color:#fff;--acc:#E5FE00;"><span class="tk">Ada</span><span class="tk">just</span><span class="tk">got</span><span class="tk">paid</span><span class="tk chip"><span class="n">500</span> USDT</span></div>
@@ -120,9 +123,13 @@ function cursor(sel, pts, clicks){ const c=$(sel); const ox=11, oy=6;
 function gwipe(sel, t, d){ d=d||.6; const cs=$$(sel+' i'), n=cs.length;
   cs.forEach((c,k)=>{ tl.fromTo(c,{opacity:0,scale:.25},{opacity:1,scale:1,duration:.38,ease:'power2.out'},t+k*(d*.7/n)); });
   tl.fromTo(sel+' b',{opacity:0},{opacity:1,duration:.22,ease:'power2.in'},t+d*.62); }
+// gradient flow: the blurred wave layers drift slowly for the whole scene
+function meshes(){ $$('.mesh').forEach(m=>{ const d=+m.dataset.d; Array.from(m.querySelectorAll('path')).forEach((q,i)=>{ const sx=(i%2?1:-1)*(60+i*25);
+  tl.fromTo(q,{x:-sx,y:(i-1)*-18},{x:sx,y:(i-1)*18,duration:d,ease:'sine.inOut'},0); }); }); }
 function pop(sel, t){ tl.fromTo(sel,{opacity:0,y:40,scale:.94,filter:'blur(8px)'},{opacity:1,y:0,scale:1,filter:'blur(0px)',duration:.6,ease:'expo.out'},t); }
 
 const build = () => {
+meshes();
 
 roll('#s01-clk',.4);
 words('#s01-city',[.97,1.16]);

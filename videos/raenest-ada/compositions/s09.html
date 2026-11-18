@@ -48,6 +48,9 @@
 .chain .tk + .tk{margin-left:.26em}
 .chain .bx{background:#fff;color:#2E096F}
 .chain .ar{background:#E5FE00;color:#2E096F;padding:6px 18px}
+.mesh{position:absolute;inset:0;overflow:hidden}
+.mesh svg{position:absolute;left:-10%;top:-10%;width:120%;height:120%;filter:blur(95px)}
+.mesh .grain{position:absolute;inset:0;background:url(assets/brand/grain.png) repeat;background-size:384px 384px;opacity:.07;mix-blend-mode:overlay}
 .gw{position:absolute;inset:0;overflow:hidden}
 .gw i{position:absolute;border-radius:50%;background:var(--c);filter:blur(90px)}
 .gw b{position:absolute;inset:0;background:var(--c)}
@@ -126,9 +129,13 @@ function cursor(sel, pts, clicks){ const c=$(sel); const ox=11, oy=6;
 function gwipe(sel, t, d){ d=d||.6; const cs=$$(sel+' i'), n=cs.length;
   cs.forEach((c,k)=>{ tl.fromTo(c,{opacity:0,scale:.25},{opacity:1,scale:1,duration:.38,ease:'power2.out'},t+k*(d*.7/n)); });
   tl.fromTo(sel+' b',{opacity:0},{opacity:1,duration:.22,ease:'power2.in'},t+d*.62); }
+// gradient flow: the blurred wave layers drift slowly for the whole scene
+function meshes(){ $$('.mesh').forEach(m=>{ const d=+m.dataset.d; Array.from(m.querySelectorAll('path')).forEach((q,i)=>{ const sx=(i%2?1:-1)*(60+i*25);
+  tl.fromTo(q,{x:-sx,y:(i-1)*-18},{x:sx,y:(i-1)*18,duration:d,ease:'sine.inOut'},0); }); }); }
 function pop(sel, t){ tl.fromTo(sel,{opacity:0,y:40,scale:.94,filter:'blur(8px)'},{opacity:1,y:0,scale:1,filter:'blur(0px)',duration:.6,ease:'expo.out'},t); }
 
 const build = () => {
+meshes();
 
 tl.fromTo('#s09-bg',{backgroundColor:'#ffffff'},{backgroundColor:'#8E7BDB',duration:.12,ease:'none'},0);
 tl.fromTo('#s09-bg',{backgroundColor:'#8E7BDB'},{backgroundColor:'#2E096F',duration:.22,ease:'power2.out',immediateRender:false},.12);
