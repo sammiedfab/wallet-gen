@@ -41,3 +41,13 @@ Edits after cut 1: opening clock now 09:02 → 09:03 (voice re-recorded "Nine oh
 ## Scene ids (for targeted edits)
 s01 hook 0–5.0 · s02 what-is 5.0–12.8 · s03 receive USDT/Solana 12.8–26.9 · s04 SOL→USDC 26.9–36.7 ·
 s05 Vault 36.7–47.8 · s06 cards 47.8–57.5 · s07 send 57.5–64.3 · s08 CTA 64.3–74.2 · s09 logo 74.2–78.2
+
+## v2 restyle (after the "Pulse" reference reel) — not yet rendered
+- Generator: `.work/gen2.py` (v1 kept as `.work/gen.py`). Same story, voice and timings.
+- Text flow: one centred line that grows word by word and re-centres as it grows; typewriter caret
+  ("No wire delays."); keywords in lime pills; two-line side captions with the second line in accent;
+  chip chains joined by arrows ("Get paid → Save → Spend → Send", "BTC ETH SOL → USDC", "1 USDT ≈ $1.00").
+- UI flow: large frameless app screens on a light ground, cropped by the frame; camera pans/pushes;
+  a big cursor clicks (Solana tab, Copy, Crypto tab, Withdraw, Pay from, Stablecoin, Send);
+  notification cards pop over a violet wash (USDT received, Add money successful, Interest earned, Paid, Sent).
+- Colours stay Raenest's (indigo text beats, light UI beats, lime/violet accents) in place of the reel's black/white/green.

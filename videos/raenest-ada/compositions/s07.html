@@ -4,105 +4,167 @@
 #root{position:absolute;inset:0;overflow:hidden}
 .st{position:absolute;inset:0;overflow:hidden}
 .bg{position:absolute;inset:0}
-.disp{position:absolute;font-family:Inter,sans-serif;font-weight:900;letter-spacing:-0.035em;line-height:1.02;color:#fff;margin:0;white-space:nowrap}
-.bd{position:absolute;font-family:Inter,sans-serif;font-weight:700;color:#fff;white-space:nowrap}
-.wd{display:inline-block;white-space:pre}
-.lime{color:#E5FE00}
-.phone{position:absolute;width:460px;height:940px;border-radius:74px;background:#101014;padding:16px;box-shadow:0 40px 90px rgba(10,0,40,.38)}
-.scr{position:relative;width:100%;height:100%;border-radius:58px;background:#fff;overflow:hidden;font-family:Inter,sans-serif;color:#1b1b1f}
-.phone.sm{width:410px;height:840px;border-radius:66px;padding:14px}
-.phone.sm .scr{border-radius:52px}
-.isl{position:absolute;left:50%;top:14px;width:124px;height:36px;margin-left:-62px;border-radius:20px;background:#101014;z-index:9}
-.sbar{position:absolute;left:38px;right:38px;top:20px;display:flex;justify-content:space-between;font:700 17px Inter,sans-serif;color:#1b1b1f}
-.lay{position:absolute;inset:0;padding:84px 26px 0 26px}
-.ap-h{font:700 30px Inter,sans-serif;margin:18px 0 4px}
-.ap-s{font:400 17px Inter,sans-serif;color:#6b6b76}
-.ap-tabs{display:flex;background:#f3f2f7;border-radius:14px;padding:5px;margin:18px 0;position:relative}
+.ln{position:absolute;left:960px;white-space:nowrap;font-family:Inter,sans-serif;font-weight:500;letter-spacing:0;line-height:1.3;color:#fff}
+.ln .tk{display:inline-block;white-space:pre}
+.ln .tk + .tk{margin-left:.26em}
+.ln.tw .tk + .tk{margin-left:0}
+.cap .tk + .tk,.ctr .tk + .tk{margin-left:.26em}
+.chip{background:#E5FE00;color:#2E096F;border-radius:.24em;padding:0 .28em}
+.chip.v{background:#4F3BD7;color:#fff}
+.chip.w{background:#fff;color:#2E096F}
+.caret{position:absolute;top:.12em;width:.07em;height:1.05em;background:currentColor;left:0}
+.ctr{position:absolute;left:0;width:1920px;text-align:center;white-space:nowrap;font-family:Inter,sans-serif;font-weight:500;line-height:1.3}
+.ctr .tk{display:inline-block;white-space:pre}
+.cap{position:absolute;left:192px;font-family:Inter,sans-serif;font-weight:500;font-size:68px;line-height:1.14;white-space:nowrap}
+.cap .tk{display:inline-block;white-space:pre}
+.clk{position:absolute;left:0;width:1920px;display:flex;justify-content:center;font-family:Inter,sans-serif;font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1}
+.clk .dg{display:inline-block;height:1em;overflow:hidden}
+.clk .strip{display:flex;flex-direction:column;align-items:center}
+.clk .strip span{display:block;height:1em;line-height:1}
+.panel{position:absolute;background:#fff;border-radius:44px;box-shadow:0 40px 100px rgba(46,9,111,.16);overflow:hidden}
+.cam{position:absolute;left:0;top:0;width:100%;height:100%}
+.inner{position:absolute;left:0;top:0;width:428px;height:760px;transform:scale(1.5);transform-origin:0 0;font-family:Inter,sans-serif;color:#1b1b1f}
+.lay{position:absolute;inset:0;padding:64px 26px 0 26px;background:#fff}
+.sbar{position:absolute;left:30px;right:30px;top:18px;display:flex;justify-content:space-between;font:700 15px Inter,sans-serif;color:#1b1b1f;z-index:3}
+.ap-h{font:700 30px Inter,sans-serif;margin:14px 0 4px}
+.ap-s{font:400 16px Inter,sans-serif;color:#6b6b76}
+.ap-tabs{display:flex;background:#f3f2f7;border-radius:14px;padding:5px;margin:16px 0;position:relative}
 .ap-tabs div{flex:1;text-align:center;font:700 16px Inter,sans-serif;color:#6b6b76;padding:11px 0;position:relative;z-index:2}
-.ap-tabs .ind{position:absolute;top:5px;bottom:5px;border-radius:10px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08);z-index:1}
-.ap-row{display:flex;align-items:center;gap:14px;padding:16px 6px;border-bottom:1px solid #eeedf3;font:700 19px Inter,sans-serif}
-.ap-btn{background:#4F3BD7;color:#fff;border-radius:14px;text-align:center;font:700 18px Inter,sans-serif;padding:16px 0}
+.ap-tabs .ind{position:absolute;top:5px;bottom:5px;border-radius:10px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08);z-index:1;padding:0}
+.ap-row{display:flex;align-items:center;gap:14px;padding:15px 8px;border-bottom:1px solid #eeedf3;font:700 19px Inter,sans-serif;border-radius:14px}
+.ap-btn{background:#4F3BD7;color:#fff;border-radius:14px;text-align:center;font:700 18px Inter,sans-serif;padding:15px 0}
 .ap-ic{width:40px;height:40px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font:900 16px Inter,sans-serif;color:#fff}
-.callout{position:absolute;background:#fff;border-radius:30px;padding:30px 36px;box-shadow:0 30px 70px rgba(10,0,40,.30);font-family:Inter,sans-serif;color:#1b1b1f}
-.tag{display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border-radius:18px;font:700 34px Inter,sans-serif;background:#fff;color:#2E096F;margin-right:14px}
-.tag img{width:40px;height:40px}
-.clock{position:absolute;font-family:Inter,sans-serif;font-weight:900;color:#fff;letter-spacing:-0.04em;display:flex;line-height:1;transform-origin:0 0}
-.clock .dg{display:inline-block;height:1em;overflow:hidden}
-.clock .strip{display:flex;flex-direction:column;align-items:flex-start}
-.clock .strip span{display:block;height:1em;line-height:1}
-.clock .col{display:inline-block;height:1em;line-height:.92}
+.cur{position:absolute;left:0;top:0;width:66px;height:66px;z-index:40}
+.notif{position:absolute;width:680px;display:flex;gap:20px;align-items:center;background:rgba(255,255,255,.98);border-radius:32px;padding:22px 26px;box-shadow:0 24px 60px rgba(20,0,60,.22);font-family:Inter,sans-serif;z-index:30}
+.notif .ni{width:68px;height:68px;border-radius:18px;background:#4F3BD7;display:flex;align-items:center;justify-content:center;flex:none}
+.notif .ni img{width:40px;height:40px}
+.notif .nt{flex:1}
+.notif .nh{display:flex;justify-content:space-between;align-items:baseline;font:700 28px Inter,sans-serif;color:#1b1b1f}
+.notif .nh span{font:400 26px Inter,sans-serif;color:#8a8794}
+.notif .nb{font:400 26px Inter,sans-serif;color:#3a3a44;margin-top:4px}
+.wash{position:absolute;left:0;right:0;bottom:0;height:560px;background:linear-gradient(to top,rgba(79,59,215,.50),rgba(79,59,215,0))}
+.chain{position:absolute;left:960px;white-space:nowrap;font-family:Inter,sans-serif;font-weight:500;line-height:1.3}
+.chain .tk{display:inline-block;white-space:pre;border-radius:18px;padding:6px 26px}
+.chain .tk + .tk{margin-left:.26em}
+.chain .bx{background:#fff;color:#2E096F}
+.chain .ar{background:#E5FE00;color:#2E096F;padding:6px 18px}
+.fn{position:absolute;font-family:Inter,sans-serif;font-weight:400;font-size:28px;white-space:nowrap}
 
-
-#s07-bg{background:#4D3DD3}
-#s07-net{left:900px;top:520px;width:820px;padding:30px 36px}
-#s07-net .k{font:700 30px Inter,sans-serif;color:#6b6b76;margin-bottom:18px}
-#s07-net .n{display:inline-block;font:700 36px Inter,sans-serif;border:2px solid #e6e5ec;border-radius:16px;padding:14px 22px;margin:0 12px 12px 0}
+#s07-bg{background:#2E096F} #s07-lt{background:#F4F2FB}
+#s07-ch{left:192px !important} #s07-wash{opacity:0}
 
 </style>
 <div id="root" data-composition-id="s07" data-width="1920" data-height="1080">
 <div id="s07-st" class="st clip" data-start="0" data-duration="6.75" data-layout-allow-overflow>
 
 <div id="s07-bg" class="bg"></div>
-<h1 id="s07-day" class="disp" style="left:192px;top:110px;font-size:96px"><span class="wd">Friday </span></h1>
-<div id="s07-phone" class="phone sm" style="left:260px;top:236px;"><div class="scr"><div class="isl"></div><div class="sbar"><span>9:41</span><span>5G ▮</span></div>
-<div class="lay" id="s07-scrA">
+<div id="s07-day" class="ln" style="top:470px;font-size:84px;color:#fff;--acc:#E5FE00;"><span class="tk chip">Friday.</span></div>
+<div id="s07-lt" class="bg"></div>
+<div id="s07-wash" class="wash"></div>
+<div id="s07-p" class="panel" style="left:1020px;top:120px;width:642px;height:1140px"><div class="cam" id="s07-cam"><div class="inner"><div class="sbar"><span>9:41</span><span>5G ▮</span></div>
+<div class="lay" id="s07-A">
   <div style="font-size:22px">←</div>
   <div class="ap-h">Send money</div><div class="ap-s">Who are you sending to?</div>
-  <div style="margin-top:20px">
+  <div style="margin-top:18px">
   <div class="ap-row"><div class="ap-ic" style="background:#efedfb;color:#4F3BD7">▣</div>Bank Account</div>
   <div class="ap-row"><div class="ap-ic" style="background:#efedfb;color:#4F3BD7">▤</div>Mobile Money</div>
   <div class="ap-row"><div class="ap-ic" style="background:#efedfb;color:#4F3BD7">@</div>Raenest Tag</div>
-  <div class="ap-row" id="s07-stab" style="border-radius:14px"><div class="ap-ic" style="background:#4F3BD7;color:#fff">$</div>Stablecoin</div>
+  <div class="ap-row" id="s07-stab"><div class="ap-ic" style="background:#4F3BD7;color:#fff">$</div>Stablecoin</div>
   </div>
 </div>
-<div class="lay" id="s07-scrB" style="background:#fff">
+<div class="lay" id="s07-B">
   <div style="font-size:22px">←</div>
   <div class="ap-h">Send USDC</div><div class="ap-s">To an external wallet</div>
-  <div style="font:700 15px Inter;color:#6b6b76;margin:22px 0 8px">Network</div>
-  <div style="display:flex;flex-wrap:wrap;gap:8px"><div style="border:1px solid #e6e5ec;border-radius:12px;padding:10px 14px;font:700 15px Inter">Ethereum</div><div style="border:1px solid #e6e5ec;border-radius:12px;padding:10px 14px;font:700 15px Inter">Binance</div><div style="border:2px solid #4F3BD7;color:#4F3BD7;border-radius:12px;padding:10px 14px;font:700 15px Inter">Solana</div><div style="border:1px solid #e6e5ec;border-radius:12px;padding:10px 14px;font:700 15px Inter">Polygon</div></div>
-  <div style="font:700 15px Inter;color:#6b6b76;margin:22px 0 8px">Recipient wallet address</div>
+  <div style="font:700 15px Inter;color:#6b6b76;margin:20px 0 8px">Network</div>
+  <div style="display:flex;flex-wrap:wrap;gap:8px"><div id="s07-net0" style="border:1px solid #e6e5ec;color:#1b1b1f;border-radius:12px;padding:10px 14px;font:700 15px Inter">Ethereum</div><div id="s07-net1" style="border:1px solid #e6e5ec;color:#1b1b1f;border-radius:12px;padding:10px 14px;font:700 15px Inter">Binance</div><div id="s07-net2" style="border:2px solid #4F3BD7;color:#4F3BD7;border-radius:12px;padding:10px 14px;font:700 15px Inter">Solana</div><div id="s07-net3" style="border:1px solid #e6e5ec;color:#1b1b1f;border-radius:12px;padding:10px 14px;font:700 15px Inter">Polygon</div></div>
+  <div style="font:700 15px Inter;color:#6b6b76;margin:20px 0 8px">Recipient wallet address</div>
   <div style="border:1px solid #e6e5ec;border-radius:12px;padding:14px;font:400 15px Inter">9WzD…AWWM</div>
-  <div style="font:700 15px Inter;color:#6b6b76;margin:22px 0 8px">Amount</div>
+  <div style="font:700 15px Inter;color:#6b6b76;margin:20px 0 8px">Amount</div>
   <div style="border:1px solid #e6e5ec;border-radius:12px;padding:14px;font:700 22px Inter">120.00 USDC</div>
-  <div class="ap-btn" style="margin-top:26px">Send</div>
-  <div id="s07-sent" style="position:absolute;left:26px;right:26px;top:300px;bottom:0;background:#fff;text-align:center;padding-top:60px">
-    <div style="width:96px;height:96px;border-radius:50%;background:#13a36b;color:#fff;display:inline-flex;align-items:center;justify-content:center;font:900 52px Inter">✓</div>
-    <div style="font:900 30px Inter;margin-top:20px">Sent</div><div class="ap-s" style="margin-top:6px">120.00 USDC · Solana</div></div>
-</div></div></div>
-<h1 id="s07-h" class="disp" style="left:900px;top:250px;font-size:104px"><span class="wd">To </span><span class="wd">any </span><br><span class="wd lime">external </span><span class="wd">wallet. </span></h1>
-<div id="s07-net" class="callout"><div class="k">Supported networks</div><span class="n" id="s07-n0">Ethereum</span><span class="n" id="s07-n1">Binance</span><span class="n" id="s07-n2">Solana</span><span class="n" id="s07-n3">Polygon</span></div>
+  <div class="ap-btn" id="s07-send" style="margin-top:22px">Send</div>
+</div></div></div></div>
+<div id="s07-c1" class="cap" style="top:380px;left:192px;font-size:68px;color:#1B1B1F;--acc:#4F3BD7"><div><span class="tk">When</span><span class="tk">she</span><span class="tk">needs</span><span class="tk">her</span></div><div style="color:#4F3BD7"><span class="tk">crypto</span><span class="tk">elsewhere,</span></div></div>
+<div id="s07-c2" class="cap" style="top:380px;left:192px;font-size:68px;color:#1B1B1F;--acc:#4F3BD7"><div><span class="tk">she</span><span class="tk">sends</span><span class="tk">USDC</span><span class="tk">to</span><span class="tk">an</span></div><div style="color:#4F3BD7"><span class="tk">external</span><span class="tk">wallet.</span></div></div>
+<div id="s07-c3" class="cap" style="top:330px;left:192px;font-size:68px;color:#1B1B1F;--acc:#4F3BD7"><div><span class="tk">On</span><span class="tk">supported</span></div><div style="color:#4F3BD7"><span class="tk">networks.</span></div></div>
+<div id="s07-n" class="notif" data-layout-allow-occlusion data-layout-allow-overlap style="left:960px;top:150px"><div class="ni"><img src="assets/brand/usdc.png"></div><div class="nt"><div class="nh">Sent<span>now</span></div><div class="nb">120.00 USDC on Solana · to 9WzD…AWWM</div></div></div>
+<svg class="cur" id="s07-cur" viewBox="0 0 24 24"><path d="M4 2 L4 19.5 L8.6 15.2 L11.6 22 L14.8 20.6 L11.8 14 L18.2 14 Z" fill="#111" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+<div id="s07-chw" class="chain" style="top:560px;font-size:44px;left:192px"><span class="tk bx" style="background:#fff;box-shadow:0 8px 24px rgba(46,9,111,.12)">Ethereum</span><span class="tk bx" style="box-shadow:0 8px 24px rgba(46,9,111,.12)">Binance</span><span class="tk bx" style="background:#4F3BD7;color:#fff">Solana</span><span class="tk bx" style="box-shadow:0 8px 24px rgba(46,9,111,.12)">Polygon</span></div>
 
 </div>
 </div>
 <script>
 (() => {
+const tl = gsap.timeline({ paused: true });
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => Array.from(document.querySelectorAll(s));
-function inn(tl, el, from, to, t){ tl.fromTo(el, from, Object.assign({ease:'expo.out',duration:.7}, to), t); }
-function out(tl, el, from, to, t){ tl.fromTo(el, from, Object.assign({ease:'power3.in',duration:.3, immediateRender:false}, to), t); }
-function wordsIn(tl, sel, times){ $$(sel+' .wd').forEach((w,i)=>{ const t = Array.isArray(times) ? times[Math.min(i,times.length-1)] + (i>=times.length ? (i-times.length+1)*.08 : 0) : times + i*.08;
-  tl.fromTo(w,{opacity:0,filter:'blur(6px)'},{opacity:1,filter:'blur(0px)',duration:.16,ease:'power2.out'},t); }); }
-function blurOut(tl, sel, t){ tl.fromTo(sel,{opacity:1,filter:'blur(0px)'},{opacity:0,filter:'blur(8px)',duration:.22,ease:'power2.in',immediateRender:false},t); }
-function roll(tl, cid, t){ tl.fromTo('#'+cid+' .strip.chg',{yPercent:0},{yPercent:-50,duration:.55,ease:'power3.inOut',stagger:.05},t);
-  tl.fromTo('#'+cid+' .strip.chg span:first-child',{opacity:1},{opacity:0,duration:.4,ease:'power2.in',stagger:.05},t+.05);
-  tl.fromTo('#'+cid+' .strip.chg span:last-child',{opacity:0},{opacity:1,duration:.4,ease:'power2.out',stagger:.05},t+.1); }
-function count(tl, el, from, to, dec, t, d, suffix){ const o={v:from}; const e=$(el); e.textContent=from.toFixed(dec)+(suffix||'');
-  tl.fromTo(o,{v:from},{v:to,duration:d,ease:'power2.out',onUpdate:()=>{e.textContent=o.v.toFixed(dec)+(suffix||'');}},t); }
+const CV = document.createElement('canvas').getContext('2d');
+function inn(el, from, to, t){ tl.fromTo(el, from, Object.assign({ease:'expo.out',duration:.7}, to), t); }
+function out(el, t, d){ tl.fromTo(el,{opacity:1,filter:'blur(0px)'},{opacity:0,filter:'blur(10px)',duration:d||.25,ease:'power2.in',immediateRender:false},t); }
+function prep(sel){
+  const el=$(sel), cs=getComputedStyle(el), fs=parseFloat(cs.fontSize);
+  const font=cs.fontWeight+' '+fs+'px Inter';
+  const tw=el.classList.contains('tw'), chain=el.classList.contains('chain');
+  const gap=tw?0:fs*.26; const toks=Array.from(el.querySelectorAll(':scope > .tk')); let acc=0; const ends=[];
+  toks.forEach((t,i)=>{ CV.font=(t.dataset.w||cs.fontWeight)+' '+fs+'px Inter';
+    let w=CV.measureText(t.textContent).width;
+    if(t.classList.contains('chip')) w+=fs*.56;
+    if(chain) w+= t.classList.contains('ar') ? 36 : 52;
+    acc+=(i?gap:0)+w; ends.push(acc); });
+  return {el,toks,ends};
+}
+// a centred line that grows token by token and re-centres as it grows
+function grow(sel, times, o){ o=o||{}; const L=prep(sel), E=L.ends;
+  tl.fromTo(L.el,{x:-E[0]/2},{x:-E[0]/2,duration:.01},0);
+  L.toks.forEach((t,i)=>{ const at=times[Math.min(i,times.length-1)] + (i>=times.length?(i-times.length+1)*(o.step||.06):0);
+    tl.fromTo(t,{opacity:0,filter:o.tw?'blur(0px)':'blur(8px)'},{opacity:1,filter:'blur(0px)',duration:o.tw?.01:.2,ease:'power2.out'},at);
+    if(i>0) tl.fromTo(L.el,{x:-E[i-1]/2},{x:-E[i]/2,duration:o.tw?.12:.4,ease:'power3.out',immediateRender:false},at);
+    if(t.classList.contains('chip')||t.classList.contains('ar')||t.classList.contains('bx')) tl.fromTo(t,{scale:.55},{scale:1,duration:.45,ease:'back.out(1.7)'},at);
+    if(o.caret){ tl.fromTo(o.caret,{x:i?E[i-1]:0},{x:E[i],duration:.01,immediateRender:i===0},at); }
+  });
+  return L;
+}
+function words(sel, times){ $$(sel+' .tk').forEach((w,i)=>{ const at=times[Math.min(i,times.length-1)]+(i>=times.length?(i-times.length+1)*.07:0);
+  tl.fromTo(w,{opacity:0,filter:'blur(8px)'},{opacity:1,filter:'blur(0px)',duration:.2,ease:'power2.out'},at); }); }
+function tint(sel, times, from){ $$(sel+' .tk').forEach((w,i)=>{ const at=times[Math.min(i,times.length-1)]+(i>=times.length?(i-times.length+1)*.07:0);
+  const to=getComputedStyle(w).color; tl.fromTo(w,{color:from},{color:to,duration:.25,ease:'power2.out'},at); }); }
+function roll(sel, t){ tl.fromTo(sel+' .strip',{yPercent:0},{yPercent:-50,duration:.55,ease:'power3.inOut'},t);
+  tl.fromTo(sel+' .strip span:first-child',{opacity:1},{opacity:0,duration:.4},t+.05);
+  tl.fromTo(sel+' .strip span:last-child',{opacity:0},{opacity:1,duration:.4},t+.1); }
+function flood(sel, t, x, y, r){ tl.fromTo(sel,{clipPath:`circle(0px at ${x}px ${y}px)`},{clipPath:`circle(${r||2300}px at ${x}px ${y}px)`,duration:.5,ease:'power2.inOut'},t); }
+function count(sel, a, b, dec, t, d){ const o={v:a}, e=$(sel); e.textContent=a.toFixed(dec);
+  tl.fromTo(o,{v:a},{v:b,duration:d,ease:'power2.out',onUpdate:()=>{e.textContent=o.v.toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});}},t); }
+// big cursor: path of [t,x,y] points (x,y = tip position in frame px), clicks at given times
+function cursor(sel, pts, clicks){ const c=$(sel); const ox=11, oy=6;
+  tl.fromTo(c,{x:pts[0][1]-ox,y:pts[0][2]-oy,opacity:0},{opacity:1,duration:.2},pts[0][0]);
+  for(let i=1;i<pts.length;i++){ const p=pts[i-1], q=pts[i];
+    tl.fromTo(c,{x:p[1]-ox,y:p[2]-oy},{x:q[1]-ox,y:q[2]-oy,duration:Math.max(.3,q[0]-p[0]-.05),ease:'power3.inOut',immediateRender:false},p[0]+.05); }
+  (clicks||[]).forEach(t=>{ tl.fromTo(c,{scale:1},{scale:.8,duration:.08,ease:'power2.in',immediateRender:false},t);
+    tl.fromTo(c,{scale:.8},{scale:1,duration:.18,ease:'power2.out',immediateRender:false},t+.08); }); }
+function pop(sel, t){ tl.fromTo(sel,{opacity:0,y:40,scale:.94,filter:'blur(8px)'},{opacity:1,y:0,scale:1,filter:'blur(0px)',duration:.6,ease:'expo.out'},t); }
 
-const tl = gsap.timeline({ paused: true });
+const build = () => {
 
-tl.fromTo('#s07-day',{filter:'blur(8px)'},{filter:'blur(0px)',duration:.25,ease:'power2.out'},0);
-inn(tl,'#s07-phone',{opacity:0,y:260},{opacity:1,y:0,duration:.8},.35);
-tl.fromTo('#s07-stab',{backgroundColor:'rgba(79,59,215,0)'},{backgroundColor:'rgba(79,59,215,.12)',duration:.25},2.55);
-tl.fromTo('#s07-scrB',{opacity:0,x:60},{opacity:1,x:0,duration:.4,ease:'power3.out'},3.0);
-tl.fromTo('#s07-scrA',{opacity:1},{opacity:0,duration:.2,immediateRender:false},3.3);
-tl.fromTo('#s07-sent',{opacity:0},{opacity:1,duration:.3},4.65);
-wordsIn(tl,'#s07-h',[3.6,3.8,4.0,4.4]);
-inn(tl,'#s07-net',{opacity:0,y:50,filter:'blur(8px)'},{opacity:1,y:0,filter:'blur(0px)',duration:.5},5.0);
-[0,1,2,3].forEach(i=>{ tl.fromTo('#s07-n'+i,{borderColor:'#e6e5ec',color:'#1b1b1f'},{borderColor:'#4F3BD7',color:'#4F3BD7',duration:.2},5.35+i*.13); });
+grow('#s07-day',[0]);
+out('#s07-day',.45,.2);
+flood('#s07-lt',.55,960,540);
+inn('#s07-p',{opacity:0,y:300},{opacity:1,y:0,duration:.8},.7);
+words('#s07-c1',[.46,.68,.85,1.12,1.28,1.61,2.11]);
+cursor('#s07-cur',[[1.6,1800,1060],[2.45,1300,762],[3.3,1300,762],[3.8,1320,962],[4.6,1320,962],[5.0,1800,1070]],[2.55,3.95]);
+tl.fromTo('#s07-stab',{backgroundColor:'rgba(79,59,215,0)'},{backgroundColor:'rgba(79,59,215,.12)',duration:.2},2.6);
+tl.fromTo('#s07-B',{opacity:0,x:60},{opacity:1,x:0,duration:.35,ease:'power3.out'},2.85);
+tl.fromTo('#s07-A',{opacity:1},{opacity:0,duration:.2,immediateRender:false},3.1);
+out('#s07-c1',2.25,.2);
+words('#s07-c2',[2.38,2.64,3.07,3.41,3.58,3.75,4.43]);
+tl.fromTo('#s07-wash',{opacity:0},{opacity:1,duration:.6},4.05);
+pop('#s07-n',4.15);
+out('#s07-c2',4.8,.2);
+words('#s07-c3',[4.95,5.12,5.89]);
+$$('#s07-chw .tk').forEach((t,i)=>{ tl.fromTo(t,{opacity:0,x:60,scale:.7},{opacity:1,x:0,scale:1,duration:.5,ease:'back.out(1.6)'},5.12+i*.14); });
 
 window.__timelines["s07"] = tl;
+};
+(document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(build);
 })();
 </script>
 </template>
