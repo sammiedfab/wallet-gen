@@ -15,7 +15,7 @@
     {
       "id": "s01-hook",
       "path": "assets/voice/s01-hook.wav",
-      "duration_s": 4.139,
+      "duration_s": 4.117,
       "words": []
     },
     {
@@ -62,5 +62,5 @@
     }
   ],
   "sfx": [],
-  "total_duration_s": 66.967
+  "total_duration_s": 66.945
 }

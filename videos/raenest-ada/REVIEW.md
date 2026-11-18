@@ -1,4 +1,6 @@
-# REVIEW — A Day in Ada's Money (review cut 1)
+# REVIEW — A Day in Ada's Money (review cut 1 + edits, not yet re-rendered)
+
+Edits after cut 1: opening clock now 09:02 → 09:03 (voice re-recorded "Nine oh three"); clock removed from the USDT scene (s03); hashtags removed from the CTA card.
 
 **File:** `renders/video.mp4` · 1920×1080 · 30 fps · 78.2 s · voiceover only (no music / SFX, as asked)
 

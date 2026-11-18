@@ -48,7 +48,6 @@
 
 <div id="s03-bg" class="bg"></div>
 <img id="s03-coins" src="assets/brand/coins_on_violet.png" style="position:absolute;left:830px;top:40px;width:960px;height:718px">
-<div id="s03-clock" class="clock" data-layout-allow-overflow data-layout-ignore style="font-size:96px;left:192px;top:110px;"><span class="dg"><span class="strip chg"><span>09:02</span><span>09:03</span></span></span></div>
 <div id="s03-phone" class="phone sm" style="left:220px;top:236px;"><div class="scr"><div class="isl"></div><div class="sbar"><span>9:41</span><span>5G ▮</span></div>
 <div class="lay" id="s03-scrA">
   <div style="font-size:22px">←</div>
@@ -99,7 +98,6 @@ function count(tl, el, from, to, dec, t, d, suffix){ const o={v:from}; const e=$
 const tl = gsap.timeline({ paused: true });
 
 
-roll(tl,'s03-clock',.25);
 inn(tl,'#s03-phone',{opacity:0,y:260},{opacity:1,y:0,duration:.85},.45);
 tl.fromTo('#s03-ind',{x:0},{x:238,duration:.55,ease:'power3.inOut'},1.35);
 tl.fromTo('#s03-sol',{color:'#6b6b76'},{color:'#4F3BD7',duration:.2},1.75);

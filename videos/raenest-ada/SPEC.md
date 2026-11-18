@@ -23,11 +23,11 @@ MOTION:  enter expo.out 0.6-0.8 s · move power3.inOut 0.6 s · exit power3.in 0
          Clock: digit strips roll (power3.inOut 0.5 s). Exits 40-50% of entries. Landed titles hold still.
 
 SHOTS (absolute s; V = voice start):
-  s01 0.00-5.04   indigo. "09:01" rolls to "09:02" (hero, 300 px) · LAGOS label · NYC client bubble
+  s01 0.00-5.04   indigo. "09:02" rolls to "09:03" (hero, 300 px) · LAGOS label · NYC client bubble
                   "Invoice paid — 500 USDT sent" lands on "paid". Clock shrinks to top-left chapter mark.
   s02 5.04-12.75  violet. "No wire delays." "No juggling five apps." 5 grey app tiles collapse into the
                   Raenest phone (real render) on "Raenest"; currency chips USD GBP EUR NGN USDT USDC.
-  s03 12.75-26.88 violet coins plate. 09:03. Phone: USDT details, network tabs Ethereum/Tron/Solana ->
+  s03 12.75-26.88 violet coins plate. (no clock) Phone: USDT details, network tabs Ethereum/Tron/Solana ->
                   Solana; address pill pulled out at 2x + "Copied"; balance 0.00 -> 500.00 USDT;
                   "fast · low cost"; coins render + "1 USDT ≈ 1 USD" on "one to one".
   s04 26.88-36.70 coral. 12:30. Real "Add money" screen (Crypto tab), rows extend with BTC ETH SOL;
@@ -39,7 +39,7 @@ SHOTS (absolute s; V = voice start):
   s07 57.52-64.27 violet. FRIDAY. Send money: receiver type -> Stablecoin; networks Ethereum Binance
                   Solana Polygon; "Sent 120 USDC" success.
   s08 64.27-74.20 lime flood. "Get paid. Save. Spend. Send." -> "All in one app." -> CTA card with
-                  referral link + code sammiedfab + hashtags, held >= 3 s.
+                  referral link + code sammiedfab (no hashtags), held >= 3 s.
   s09 74.20-78.20 logo sting copied from Raenest's own reel: white flash -> lavender -> indigo in 0.3 s,
                   mark resolves from blur with a continuous 3D turn, wordmark rises, "Your global money
                   partner", thin bar wipes in.

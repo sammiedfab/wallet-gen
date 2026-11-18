@@ -152,7 +152,7 @@ S["s01"] = ("""
 #s01-route{left:1060px;top:640px;font-size:40px;color:rgba(255,255,255,.85)}
 """ % INDIGO, f"""
 <div id="s01-bg" class="bg"></div>
-{clock('s01-clock','09:01','09:02',300,530,330)}
+{clock('s01-clock','09:02','09:03',300,530,330)}
 <div id="s01-city" class="bd" style="left:540px;top:660px;font-size:52px;color:rgba(255,255,255,.8)">{words('Lagos, Nigeria')}</div>
 <div id="s01-bubble" class="callout"><div class="who">Mike · Studio Nine, New York</div><div class="msg">Invoice paid. Sent you <span style="color:#4F3BD7">500 USDT</span>.</div></div>
 <div id="s01-route" class="bd">New York <span class="lime">→</span> Lagos</div>
@@ -255,7 +255,6 @@ S["s03"] = ("""
 """ % VIOLET, f"""
 <div id="s03-bg" class="bg"></div>
 <img id="s03-coins" src="assets/brand/coins_on_violet.png" style="position:absolute;left:830px;top:40px;width:960px;height:718px">
-{clock('s03-clock','09:02','09:03',96,192,110)}
 {phone('s03-phone',220,236,usdt_details+usdt_wallet,cls=' sm')}
 <h1 id="s03-h" class="disp" style="left:830px;top:170px;font-size:110px">{words('Fast.')} {words('*Low cost.')}</h1>
 <div id="s03-addr" class="callout"><div class="k">Her USDT address · Solana</div><div class="v">{addr}</div></div>
@@ -265,7 +264,6 @@ S["s03"] = ("""
 <h1 id="s03-eq" class="disp" style="left:830px;top:840px;font-size:110px">{words('1 USDT')} {words('*≈ $1.00')}</h1>
 """, """
 
-roll(tl,'s03-clock',.25);
 inn(tl,'#s03-phone',{opacity:0,y:260},{opacity:1,y:0,duration:.85},.45);
 tl.fromTo('#s03-ind',{x:0},{x:238,duration:.55,ease:'power3.inOut'},1.35);
 tl.fromTo('#s03-sol',{color:'#6b6b76'},{color:'#4F3BD7',duration:.2},1.75);
@@ -475,8 +473,7 @@ S["s08"] = ("""
 <h1 id="s08-l1" class="disp s08-d" style="left:192px;top:110px;font-size:150px">{words('Get paid. Save.')}</h1>
 <h1 id="s08-l2" class="disp s08-d" style="left:192px;top:262px;font-size:150px">{words('Spend. Send.')}</h1>
 <div id="s08-l3" class="bd s08-d" style="left:196px;top:450px;font-size:72px;font-weight:900;letter-spacing:-.03em">{words('All in one app.')}</div>
-<div id="s08-card" data-hold="true"><div class="k">Sign up with my link</div><div class="u">{REF}</div><div class="c">Referral code: sammiedfab</div>
-<div class="h">#StablecoinsonRaenest<br>#RaenestBounty</div></div>
+<div id="s08-card" data-hold="true"><div class="k">Sign up with my link</div><div class="u">{REF}</div><div class="c">Referral code: sammiedfab</div></div>
 """, """
 tl.fromTo('#s08-flood',{clipPath:'circle(0px at 960px 540px)'},{clipPath:'circle(1200px at 960px 540px)',duration:.5,ease:'power2.inOut'},0);
 wordsIn(tl,'#s08-l1',[.3,.55,1.05]);
@@ -485,7 +482,6 @@ wordsIn(tl,'#s08-l3',[2.55,2.8,3.0,3.25]);
 inn(tl,'#s08-card',{opacity:0,y:120,filter:'blur(10px)'},{opacity:1,y:0,filter:'blur(0px)',duration:.75},3.6);
 inn(tl,'#s08-card .u',{opacity:0},{opacity:1,duration:.3},4.4);
 inn(tl,'#s08-card .c',{opacity:0,scale:.8},{opacity:1,scale:1,duration:.45,ease:'back.out(1.6)'},5.0);
-inn(tl,'#s08-card .h',{opacity:0},{opacity:1,duration:.4},5.8);
 """)
 
 # s09 — LOGO STING, after Raenest's own reel ending
