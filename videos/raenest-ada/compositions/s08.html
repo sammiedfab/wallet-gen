@@ -1,0 +1,89 @@
+<template>
+<style>
+
+#root{position:absolute;inset:0;overflow:hidden}
+.st{position:absolute;inset:0;overflow:hidden}
+.bg{position:absolute;inset:0}
+.disp{position:absolute;font-family:Inter,sans-serif;font-weight:900;letter-spacing:-0.035em;line-height:1.02;color:#fff;margin:0;white-space:nowrap}
+.bd{position:absolute;font-family:Inter,sans-serif;font-weight:700;color:#fff;white-space:nowrap}
+.wd{display:inline-block;white-space:pre}
+.lime{color:#E5FE00}
+.phone{position:absolute;width:460px;height:940px;border-radius:74px;background:#101014;padding:16px;box-shadow:0 40px 90px rgba(10,0,40,.38)}
+.scr{position:relative;width:100%;height:100%;border-radius:58px;background:#fff;overflow:hidden;font-family:Inter,sans-serif;color:#1b1b1f}
+.phone.sm{width:410px;height:840px;border-radius:66px;padding:14px}
+.phone.sm .scr{border-radius:52px}
+.isl{position:absolute;left:50%;top:14px;width:124px;height:36px;margin-left:-62px;border-radius:20px;background:#101014;z-index:9}
+.sbar{position:absolute;left:38px;right:38px;top:20px;display:flex;justify-content:space-between;font:700 17px Inter,sans-serif;color:#1b1b1f}
+.lay{position:absolute;inset:0;padding:84px 26px 0 26px}
+.ap-h{font:700 30px Inter,sans-serif;margin:18px 0 4px}
+.ap-s{font:400 17px Inter,sans-serif;color:#6b6b76}
+.ap-tabs{display:flex;background:#f3f2f7;border-radius:14px;padding:5px;margin:18px 0;position:relative}
+.ap-tabs div{flex:1;text-align:center;font:700 16px Inter,sans-serif;color:#6b6b76;padding:11px 0;position:relative;z-index:2}
+.ap-tabs .ind{position:absolute;top:5px;bottom:5px;border-radius:10px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08);z-index:1}
+.ap-row{display:flex;align-items:center;gap:14px;padding:16px 6px;border-bottom:1px solid #eeedf3;font:700 19px Inter,sans-serif}
+.ap-btn{background:#4F3BD7;color:#fff;border-radius:14px;text-align:center;font:700 18px Inter,sans-serif;padding:16px 0}
+.ap-ic{width:40px;height:40px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font:900 16px Inter,sans-serif;color:#fff}
+.callout{position:absolute;background:#fff;border-radius:30px;padding:30px 36px;box-shadow:0 30px 70px rgba(10,0,40,.30);font-family:Inter,sans-serif;color:#1b1b1f}
+.tag{display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border-radius:18px;font:700 34px Inter,sans-serif;background:#fff;color:#2E096F;margin-right:14px}
+.tag img{width:40px;height:40px}
+.clock{position:absolute;font-family:Inter,sans-serif;font-weight:900;color:#fff;letter-spacing:-0.04em;display:flex;line-height:1;transform-origin:0 0}
+.clock .dg{display:inline-block;height:1em;overflow:hidden}
+.clock .strip{display:flex;flex-direction:column;align-items:flex-start}
+.clock .strip span{display:block;height:1em;line-height:1}
+.clock .col{display:inline-block;height:1em;line-height:.92}
+
+
+#s08-bg{background:#4D3DD3}
+#s08-flood{background:#E5FE00;clip-path:circle(0px at 960px 540px)}
+.s08-d{color:#2E096F}
+#s08-card{position:absolute;left:192px;top:600px;width:1536px;height:330px;background:#2E096F;border-radius:36px;padding:40px 52px;font-family:Inter,sans-serif;color:#fff}
+#s08-card .k{font:900 52px Inter,sans-serif;letter-spacing:-.02em}
+#s08-card .u{font:700 40px Inter,sans-serif;color:#E5FE00;margin-top:18px}
+#s08-card .c{display:inline-block;margin-top:24px;font:700 36px Inter,sans-serif;background:#fff;color:#2E096F;border-radius:16px;padding:12px 22px}
+#s08-card .h{position:absolute;right:52px;bottom:48px;text-align:right;font:700 32px Inter,sans-serif;color:rgba(255,255,255,.85);line-height:1.5}
+
+</style>
+<div id="root" data-composition-id="s08" data-width="1920" data-height="1080">
+<div id="s08-st" class="st clip" data-start="0" data-duration="9.93" data-layout-allow-overflow>
+
+<div id="s08-bg" class="bg"></div>
+<div id="s08-flood" class="bg"></div>
+<h1 id="s08-l1" class="disp s08-d" style="left:192px;top:110px;font-size:150px"><span class="wd">Get </span><span class="wd">paid. </span><span class="wd">Save. </span></h1>
+<h1 id="s08-l2" class="disp s08-d" style="left:192px;top:262px;font-size:150px"><span class="wd">Spend. </span><span class="wd">Send. </span></h1>
+<div id="s08-l3" class="bd s08-d" style="left:196px;top:450px;font-size:72px;font-weight:900;letter-spacing:-.03em"><span class="wd">All </span><span class="wd">in </span><span class="wd">one </span><span class="wd">app. </span></div>
+<div id="s08-card" data-hold="true"><div class="k">Sign up with my link</div><div class="u">referral.raenest.com/WzbV/i?referral_code=sammiedfab</div><div class="c">Referral code: sammiedfab</div>
+<div class="h">#StablecoinsonRaenest<br>#RaenestBounty</div></div>
+
+</div>
+</div>
+<script>
+(() => {
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+function inn(tl, el, from, to, t){ tl.fromTo(el, from, Object.assign({ease:'expo.out',duration:.7}, to), t); }
+function out(tl, el, from, to, t){ tl.fromTo(el, from, Object.assign({ease:'power3.in',duration:.3, immediateRender:false}, to), t); }
+function wordsIn(tl, sel, times){ $$(sel+' .wd').forEach((w,i)=>{ const t = Array.isArray(times) ? times[Math.min(i,times.length-1)] + (i>=times.length ? (i-times.length+1)*.08 : 0) : times + i*.08;
+  tl.fromTo(w,{opacity:0,filter:'blur(6px)'},{opacity:1,filter:'blur(0px)',duration:.16,ease:'power2.out'},t); }); }
+function blurOut(tl, sel, t){ tl.fromTo(sel,{opacity:1,filter:'blur(0px)'},{opacity:0,filter:'blur(8px)',duration:.22,ease:'power2.in',immediateRender:false},t); }
+function roll(tl, cid, t){ tl.fromTo('#'+cid+' .strip.chg',{yPercent:0},{yPercent:-50,duration:.55,ease:'power3.inOut',stagger:.05},t);
+  tl.fromTo('#'+cid+' .strip.chg span:first-child',{opacity:1},{opacity:0,duration:.4,ease:'power2.in',stagger:.05},t+.05);
+  tl.fromTo('#'+cid+' .strip.chg span:last-child',{opacity:0},{opacity:1,duration:.4,ease:'power2.out',stagger:.05},t+.1); }
+function count(tl, el, from, to, dec, t, d, suffix){ const o={v:from}; const e=$(el); e.textContent=from.toFixed(dec)+(suffix||'');
+  tl.fromTo(o,{v:from},{v:to,duration:d,ease:'power2.out',onUpdate:()=>{e.textContent=o.v.toFixed(dec)+(suffix||'');}},t); }
+
+const tl = gsap.timeline({ paused: true });
+
+tl.fromTo('#s08-flood',{clipPath:'circle(0px at 960px 540px)'},{clipPath:'circle(1200px at 960px 540px)',duration:.5,ease:'power2.inOut'},0);
+wordsIn(tl,'#s08-l1',[.3,.55,1.05]);
+wordsIn(tl,'#s08-l2',[1.5,2.05]);
+wordsIn(tl,'#s08-l3',[2.55,2.8,3.0,3.25]);
+inn(tl,'#s08-card',{opacity:0,y:120,filter:'blur(10px)'},{opacity:1,y:0,filter:'blur(0px)',duration:.75},3.6);
+inn(tl,'#s08-card .u',{opacity:0},{opacity:1,duration:.3},4.4);
+inn(tl,'#s08-card .c',{opacity:0,scale:.8},{opacity:1,scale:1,duration:.45,ease:'back.out(1.6)'},5.0);
+inn(tl,'#s08-card .h',{opacity:0},{opacity:1,duration:.4},5.8);
+
+window.__timelines["s08"] = tl;
+})();
+</script>
+</template>

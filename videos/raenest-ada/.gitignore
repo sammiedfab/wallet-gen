@@ -1,0 +1,6 @@
+.hyperframes/
+.media/
+renders/
+node_modules/
+.work/*
+!.work/gen.py
