@@ -34,7 +34,7 @@
 .ap-row{display:flex;align-items:center;gap:14px;padding:15px 8px;border-bottom:1px solid #eeedf3;font:700 19px Inter,sans-serif;border-radius:14px}
 .ap-btn{background:#4F3BD7;color:#fff;border-radius:14px;text-align:center;font:700 18px Inter,sans-serif;padding:15px 0}
 .ap-ic{width:40px;height:40px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font:900 16px Inter,sans-serif;color:#fff}
-.cur{position:absolute;left:0;top:0;width:66px;height:66px;z-index:40}
+.cur{position:absolute;left:0;top:0;width:66px;height:66px;z-index:40;filter:drop-shadow(0 6px 10px rgba(46,9,111,.35))}
 .notif{position:absolute;width:680px;display:flex;gap:20px;align-items:center;background:rgba(255,255,255,.98);border-radius:32px;padding:22px 26px;box-shadow:0 24px 60px rgba(20,0,60,.22);font-family:Inter,sans-serif;z-index:30}
 .notif .ni{width:68px;height:68px;border-radius:18px;background:#4F3BD7;display:flex;align-items:center;justify-content:center;flex:none}
 .notif .ni img{width:40px;height:40px}
@@ -122,7 +122,7 @@ function flood(sel, t, x, y, r){ tl.fromTo(sel,{clipPath:`circle(0px at ${x}px $
 function count(sel, a, b, dec, t, d){ const o={v:a}, e=$(sel); e.textContent=a.toFixed(dec);
   tl.fromTo(o,{v:a},{v:b,duration:d,ease:'power2.out',onUpdate:()=>{e.textContent=o.v.toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});}},t); }
 // big cursor: path of [t,x,y] points (x,y = tip position in frame px), clicks at given times
-function cursor(sel, pts, clicks){ const c=$(sel); const ox=11, oy=6;
+function cursor(sel, pts, clicks){ const c=$(sel); const ox=9, oy=9;
   tl.fromTo(c,{x:pts[0][1]-ox,y:pts[0][2]-oy,opacity:0},{opacity:1,duration:.2},pts[0][0]);
   for(let i=1;i<pts.length;i++){ const p=pts[i-1], q=pts[i];
     tl.fromTo(c,{x:p[1]-ox,y:p[2]-oy},{x:q[1]-ox,y:q[2]-oy,duration:Math.max(.3,q[0]-p[0]-.05),ease:'power3.inOut',immediateRender:false},p[0]+.05); }
