@@ -1,0 +1,2 @@
+telethon>=1.40
+eth-account>=0.13
